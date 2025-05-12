@@ -1,0 +1,144 @@
+/* Background Colors */
+:root {
+  --gcolor-1: rgb(203, 161, 53);
+  --gcolor-2: rgb(150, 75, 0);
+  --gcolor-3: #9C7C29;
+  --gcolor-4: #725A1E;
+  --gcolor-5: #544316;
+  --gcolor-6: #2D240C;
+}
+
+.museum-background {
+  background: linear-gradient(to right, var(--gcolor-1), var(--gcolor-2));
+}
+
+/* General Fonts */
+.subtitle-font {
+  font-family: 'Monsieur La Doulaise';
+  color: white;
+  font-size: 80px;
+}
+
+.caption-font {
+  font-family: 'Amarante';
+}
+
+/* HomePage */
+
+.decoracion-titulo {
+  width: 400px; 
+  position: absolute;
+  bottom: -50px; 
+  z-index: 1;
+}
+
+#decoracion-izquierda {   right: 500px;  }
+
+.homepage-titulo { 
+  z-index: 3;
+  text-shadow: 1px 0 10px var(--gcolor-5); 
+}
+
+#decoracion-derecha   {   left:  500px;  }
+
+.visitanos-div {
+  position: relative;
+  width: 100%;
+}
+
+#visitanos-titere-1 {
+  position: absolute;
+  bottom: -50px;
+  left: -200px;
+  z-index: 1;
+}
+
+.visitanos-text {
+  position: relative;
+  text-align: center; 
+  text-shadow: 1px 0 5px var(--gcolor-5);
+  padding-bottom: 50px; 
+  font-size: 150px;
+  z-index: 3;
+}
+
+#visitanos-titere-2 {
+  position: absolute;
+  bottom: -80px;
+  right: -50px;
+  z-index: 1;
+}
+
+.ubicacion-div {
+  background-color: rgb(89, 38, 11);
+  padding: 50px 0px 50px 0px;
+  position: relative;
+  z-index: 9;
+}
+
+@media (max-width: 992px) {
+  .visitanos-text {
+    font-size: 100px;
+  }
+}
+
+@media (max-width: 575px) {
+  #visitanos-titere-1 {
+    width: 50%;
+    left: -100px; 
+  }
+  #visitanos-titere-2 { 
+    width: 50%;
+    right: -50px; 
+   }
+}
+
+/* Collection Page */
+
+.collection-title { 
+  line-height: 1;
+  font-size: 16vw;
+  left: 24%;
+  text-shadow: 1px 0 5px var(--gcolor-5);
+}
+
+.collection-links {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+@media (min-width: 993px) {
+  .collection-title {
+    margin-top: 180px;
+  }
+}
+
+@media (max-width: 992px) {
+  .collection-title {
+    margin-top: 155px;
+  }
+}
+
+@media (max-width: 767px) {
+  .collection-title {
+    margin-top: 130px;
+  }
+}
+
+@media (max-width: 575px) {
+  .collection-title {
+    margin-top: 110px;
+  }
+}
+
+/* Autores - Obras - Títeres */
+.collection-item-container {
+  background-color: var(--gcolor-6);
+  margin-top: 50px;
+}
+
+.collection-item-container:nth-child(1) {
+  margin-top: 70px;
+}

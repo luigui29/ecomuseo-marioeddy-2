@@ -1,0 +1,32 @@
+.navbar {
+  background-color: black;
+}
+
+#ecomuseo-icon {
+  position: absolute;
+   top: 0;
+}
+
+#ecomuseo-title {
+  margin-left: 100px;
+  font-family: 'Amaranta';
+}
+
+ul.navbar-nav.ms-auto {
+  text-align: end;
+  font-family: 'Amaranta';
+}
+
+@media (max-width: 768px) {
+  ul.navbar-nav.ms-auto > li {
+    padding-inline-end: 0.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar-brand {
+    font-size: 13px;
+  }
+}
+
+footer { background-color: rgb(89, 38, 11);}
