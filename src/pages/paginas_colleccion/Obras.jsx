@@ -7,7 +7,7 @@ const ObraItem = ({ obra }) => {
   // Verificar si obra existe
   if (!obra) {
     return (
-      <div className={`container ${styles.collectionItemContainer} w-75`}>
+      <div className={`container ${ styles.collectionItemContainer} w-75`}>
         <div className='text-center p-5'>
           <h3>No hay datos disponibles</h3>
         </div>
@@ -82,7 +82,7 @@ const ObraItem = ({ obra }) => {
   const anio = obra.anio || '';
 
   return (
-    <div className={`container ${styles.collectionItemContainer} w-75`}>
+    <div className={`container ${styles.collectionItemContainer} ${styles.w75}`}>
       <div className='container'>
         <div className='row'>
           <div className={`col-8 pe-0 ${styles.itemImageContainer}`}>
