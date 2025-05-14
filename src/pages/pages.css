@@ -6,10 +6,16 @@
   --gcolor-4: #725A1E;
   --gcolor-5: #544316;
   --gcolor-6: #2D240C;
+  --bcolor-1: #9FD2F0;
+  --bcolor-2: #C1E899; 
 }
 
 .museum-background {
   background: linear-gradient(to right, var(--gcolor-1), var(--gcolor-2));
+}
+
+.taller-background {
+  background: linear-gradient(to right, var(--bcolor-1), var(--bcolor-2));
 }
 
 /* General Fonts */
@@ -21,6 +27,13 @@
 
 .caption-font {
   font-family: 'Amarante';
+}
+
+.subtitle-font-kids {
+  font-family: 'Butterfly Kids';
+  font-size: 10rem;
+  text-align: center;
+  color: white;
 }
 
 /* HomePage */
@@ -141,4 +154,31 @@
 
 .collection-item-container:nth-child(1) {
   margin-top: 70px;
+}
+
+/* Talleres */
+
+.taller-div {
+  background: var(--bcolor-1);
+  min-height: 100%;
+  width: 100%;
+  border-radius: 5%;
+}
+
+.taller-img {
+  min-height: 100%;
+  width: 100%;
+  border-radius: 5%;
+}
+
+@media (max-width: 767px) {
+  .taller-row {
+    height: 250px;
+  }
+}
+
+@media (min-width: 767px) {
+  .taller-row {
+    height: 350px;
+  }
 }
