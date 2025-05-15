@@ -128,6 +128,17 @@
    }
 }
 
+@media (max-width: 414px) {
+  #decoracion-izquierda,
+  #decoracion-derecha,
+  #visitanos-titere-1,
+  #visitanos-titere-2 {
+    display: none;
+  }
+
+  .subtitle-font { font-size: 4rem; }
+}
+
 /* Collection Page */
 
 .collection-title { 

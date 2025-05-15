@@ -4,7 +4,7 @@
 
 #ecomuseo-icon {
   position: absolute;
-   top: 0;
+  top: 0;
 }
 
 #ecomuseo-title {
@@ -23,9 +23,14 @@ ul.navbar-nav.ms-auto {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 414px) {
+  #ecomuseo-icon {
+    width: 70px;
+  }
+  
   .navbar-brand {
-    font-size: 13px;
+    padding-top: 15px;
+    font-size: 16px;
   }
 }
 
