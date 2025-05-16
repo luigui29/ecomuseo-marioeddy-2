@@ -49,14 +49,14 @@ const CardMap = () => {
           </ul>
           <div>
             <h5 className="text-muted ms-2" style={{fontSize: '1rem'}}>Dirección</h5>
-            <p className="ms-2" style={{fontSize: '0.6rem'}}>
+            <p className="ms-2" style={{fontSize: '0.8rem'}}>
               <i className="bi bi-geo-alt-fill text-primary"></i>
               Casa de la Cultura Ateneo, El Roble, Av. Guayana, San Félix, Ciudad Guayana, Edo. Bolívar
             </p>
           </div>
         </div>
       </div>
-      <div className="row border-0 card-map-mobile" style={{height: '250px'}}>
+      <div className="row border-0 card-map-mobile" style={{height: '300px'}}>
         <Mapa />
       </div>
     </div>

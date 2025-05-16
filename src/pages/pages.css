@@ -147,9 +147,37 @@
   .visitanos-text {
     font-size: 100px;
   }
+
+  .card { border-radius: 5px 5px 0 0; }
+  .card-map-pc { display: block; }
+  .card-map-mobile { display: none; }
+}
+
+@media (max-width: 768px) {
+  .card { border-radius: 5px 5px 0 0; }
+  .card-map-pc { display: block; }
+  .card-map-mobile { display: none; }
 }
 
 @media (max-width: 575px) {
+  .decoracion-titulo { 
+    width: 80px; 
+    bottom: -10px;
+  }
+
+  #decoracion-derecha { right: 0; }
+  #decoracion-izquierda { left: 0; }
+  .subtitle-font { font-size: 2.9rem; }
+  .nuestro-museo-desc { font-size: 0.8rem; }
+  .misvis-desc { 
+    height: 200px;
+    font-size: 0.9rem;
+    padding: 10px; 
+  }
+
+  .sobre-nosotros-container { width: 350px; } 
+  .autor-img-col { width: 50%; }
+
   #visitanos-titere-1 {
     width: 50%;
     left: -100px; 
@@ -158,6 +186,10 @@
     width: 50%;
     right: -50px; 
   }
+
+  .card { border-radius: 5px 5px 0 0; }
+  .card-map-pc { display: none; }
+  .card-map-mobile { display: block; }
 }
 
 @media (max-width: 414px) {

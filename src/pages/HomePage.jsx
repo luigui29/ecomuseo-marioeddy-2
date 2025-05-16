@@ -63,7 +63,7 @@ const HomePage = () => {
           <div className="row mt-5">
             <div className="col px-0 autor-img-col">
               <div className="position-relative d-flex justify-content-center autor-background-fadeout">
-                <img className='ecomuseo-autor-img' src={eddy_foto} alt="Eddy Salazar" style={{width:"50%"}}/>
+                <img className='ecomuseo-autor-img' src={eddy_foto} alt="Eddy Salazar"/>
                 <h3 className='position-absolute caption-font autor-caption mb-0'><span>Eddy </span><span>Salazar </span></h3>
               </div>
             </div>
@@ -75,7 +75,7 @@ const HomePage = () => {
           <div className="row mt-5">
             <div className="col px-0 autor-img-col">
               <div className="position-relative d-flex justify-content-center autor-background-fadeout">
-                <img className='ecomuseo-autor-img' src={mario_foto} alt="Mario Pereira" style={{width:"50%"}}/>
+                <img className='ecomuseo-autor-img' src={mario_foto} alt="Mario Pereira"/>
                 <h3 className='position-absolute caption-font autor-caption mb-0'><span>Mario </span><span>Pereira </span></h3>
               </div>
             </div>
