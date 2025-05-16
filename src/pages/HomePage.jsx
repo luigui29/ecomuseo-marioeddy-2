@@ -45,18 +45,28 @@ const HomePage = () => {
         
         {/* Sección Sobre Nosotros */}
         <div className='container sobre-nosotros-container'>
-          <div className="row">
-            <div className="col-6">
+          <div className="row mt-5">
+            <div className="col px-0 autor-img-col">
+              <div className="position-relative d-flex justify-content-center autor-background-fadeout">
                 <img className='ecomuseo-autor-img' src={eddy_foto} alt="Eddy Salazar" style={{width:"50%"}}/>
-            </div>
-            <div className="col-6">
-                <img className='ecomuseo-autor-img' src={mario_foto} alt="Mario Pereira" style={{width:"50%"}}/>
+                <h3 className='position-absolute caption-font autor-caption mb-0'><span>Eddy </span><span>Salazar </span></h3>
+              </div>
             </div>
           </div>
-          {/* Texto Historia */}
-          <div className="row-6">
-            <div className="row">Fundados en 2024</div>
-            <div className="row">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora molestiae architecto quae, nihil eligendi sequi alias labore aut explicabo porro nemo natus ut, doloremque, consequuntur consectetur in assumenda sapiente id.</div>
+          <div className="row d-flex flex-column historia-background">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora molestiae architecto quae, nihil eligendi sequi alias labore aut explicabo porro nemo natus ut, doloremque, consequuntur consectetur in assumenda sapiente id.
+          </div>
+
+          <div className="row mt-5">
+            <div className="col px-0 autor-img-col">
+              <div className="position-relative d-flex justify-content-center autor-background-fadeout">
+                <img className='ecomuseo-autor-img' src={mario_foto} alt="Mario Pereira" style={{width:"50%"}}/>
+                <h3 className='position-absolute caption-font autor-caption mb-0'><span>Mario </span><span>Pereira </span></h3>
+              </div>
+            </div>
+          </div>
+          <div className="row d-flex flex-column historia-background">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora molestiae architecto quae, nihil eligendi sequi alias labore aut explicabo porro nemo natus ut, doloremque, consequuntur consectetur in assumenda sapiente id.
           </div>
         </div>
 
