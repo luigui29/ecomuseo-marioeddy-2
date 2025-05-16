@@ -75,15 +75,7 @@
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 2.5rem;
-  }
-  .hero-subtitle {
-    font-size: 1.25rem;
-  }
-}
-@media (max-width: 414px) {
+@media (max-width: 414px), (max-width: 576px), (max-width: 768px)  {
   .hero-section {
     height: 300px;
   }
