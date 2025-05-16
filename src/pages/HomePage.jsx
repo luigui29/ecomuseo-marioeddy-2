@@ -44,19 +44,13 @@ const HomePage = () => {
         </section>
         
         {/* Sección Sobre Nosotros */}
-        <div className='container' style={{marginBottom: '200px'}}>
+        <div className='container sobre-nosotros-container'>
           <div className="row">
             <div className="col-6">
-              <div className="row d-flex flex-wrap justify-content-center">
-                <img src={eddy_foto} alt="Eddy Salazar" style={{width:"50%"}}/>
-              </div>
-              <div className="row d-flex flex-wrap justify-content-center">Eddy Salazar</div>
+                <img className='ecomuseo-autor-img' src={eddy_foto} alt="Eddy Salazar" style={{width:"50%"}}/>
             </div>
             <div className="col-6">
-              <div className="row d-flex flex-wrap justify-content-center">
-                <img src={mario_foto} alt="Mario Pereira" style={{width:"50%"}}/>
-              </div>
-              <div className="row d-flex flex-wrap justify-content-center">Mario Pereira</div>
+                <img className='ecomuseo-autor-img' src={mario_foto} alt="Mario Pereira" style={{width:"50%"}}/>
             </div>
           </div>
           {/* Texto Historia */}

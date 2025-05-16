@@ -135,6 +135,10 @@
 
   .subtitle-font { font-size: 4rem; }
 
+  .sobre-nosotros-container { 
+    margin-bottom: 100px;
+  }
+
   #visitanos-titere-1,
   #visitanos-titere-2 { bottom: -30px; }
 
