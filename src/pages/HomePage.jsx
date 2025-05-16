@@ -3,7 +3,7 @@ import React from 'react'
 // Components
 
 import Hero from '../Components/Hero.jsx'
-import BigCard from '../Components/BigCard.jsx'
+import CardMap from '../Components/CardMap.jsx'
 import Footer from '../Components/sections/Footer.jsx'
 
 // Assets
@@ -75,14 +75,11 @@ const HomePage = () => {
         </div>
 
         {/* Sección Ubicación */}
-        <div className='ubicacion-div'>
-          <section className="py-0 bg-light border border-2 mb-5 ms-5 me-5">
-            <div className="container mx-0 px-0 mw-100">
-              <BigCard/>
+        <div className='ubicacion-div py-0'>
+            <div className="container ubicacion-container mx-0 h-auto p-3 mw-100">
+              <CardMap />
             </div>
-          </section>
         </div>
-        
       </main>
       
      <Footer/>

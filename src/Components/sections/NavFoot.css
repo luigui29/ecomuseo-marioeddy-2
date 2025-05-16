@@ -23,6 +23,17 @@ ul.navbar-nav.ms-auto {
   }
 }
 
+@media (max-width: 577px) {
+  #ecomuseo-icon {
+    width: 70px;
+  }
+  
+  .navbar-brand {
+    padding-top: 15px;
+    font-size: 16px;
+  }
+}
+
 @media (max-width: 414px) {
   #ecomuseo-icon {
     width: 70px;

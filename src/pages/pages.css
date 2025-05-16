@@ -74,7 +74,7 @@
   text-shadow: 1px 0 10px var(--gcolor-5); 
 }
 
-#decoracion-derecha   {   left:  500px;  }
+/*#decoracion-derecha   {   left:  500px;  }*/
 
 .visitanos-div {
   position: relative;
@@ -83,8 +83,6 @@
 
 #visitanos-titere-1 {
   position: absolute;
-  bottom: -50px;
-  left: -200px;
   z-index: 1;
 }
 
@@ -99,8 +97,6 @@
 
 #visitanos-titere-2 {
   position: absolute;
-  bottom: -80px;
-  right: -50px;
   z-index: 1;
 }
 
@@ -129,14 +125,34 @@
 }
 
 @media (max-width: 414px) {
-  #decoracion-izquierda,
-  #decoracion-derecha,
-  #visitanos-titere-1,
-  #visitanos-titere-2 {
-    display: none;
-  }
+  .decoracion-titulo { 
+    width: 100px; 
+    bottom: -20px;
+}
+
+  #decoracion-derecha { right: 0; }
+  #decoracion-izquierda { left: 0; }
 
   .subtitle-font { font-size: 4rem; }
+
+  #visitanos-titere-1,
+  #visitanos-titere-2 { bottom: -30px; }
+
+  #visitanos-titere-1 {
+    width: 150px; 
+    left: 0;
+  }
+
+  #visitanos-titere-2 {
+    width: 200px;
+    right: 0px;
+  }
+
+  .ubicacion-container { height: 200px; }
+
+  .card { border-radius: 5px 5px 0 0; }
+  .card-map-pc { display: none; }
+  .card-map-mobile { display: block; }
 }
 
 /* Collection Page */
