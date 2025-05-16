@@ -24,7 +24,7 @@ const HomePage = () => {
         <section className="my-5">
           <div className="container">
             <div className="row justify-content-center">
-              <div className="col-auto align-items-center position-relative">
+              <div className="col align-items-center position-relative">
                 <img 
                   src={decoracion_i} 
                   alt="decoración izquierda" 
@@ -38,6 +38,21 @@ const HomePage = () => {
                   className="img-fluid ms-3 decoracion-titulo" 
                   id="decoracion-derecha"
                 />
+              </div>
+            </div>
+          </div>
+          <div className="container">
+            <div className="row nuestro-museo-desc caption-font">
+              Fundado en 2024, Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Lorem Ipsum.
+            </div>
+            <div className="row">
+              <div className="col-6 d-flex flex-column">
+                <div className='subtitle-font' style={{margin: '0 auto'}}> Visión </div>
+                <div className='misvis-desc'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum sed iste magnam eligendi totam, deserunt distinctio mollitia minima error accusantium rerum reiciendis doloremque iure, voluptas aliquid provident, eaque explicabo itaque.</div>
+              </div>
+              <div className="col-6 d-flex flex-column">
+                <div className='subtitle-font' style={{margin: '0 auto'}}> Misión </div>
+                <div className='misvis-desc'> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi ex animi repudiandae fugiat odio ullam molestias enim, earum fugit beatae est! Aliquid voluptas labore cupiditate aliquam a expedita amet eligendi. </div>
               </div>
             </div>
           </div>
