@@ -6,7 +6,7 @@ const CardMap = () => {
     <div className="card border-0 shadow-lg h-auto">
       {/* PC VIEW */}
       <div className="row g-0 h-100 card-map-pc">
-        <div className="col-md-6 p-4 d-flex flex-column">
+        <div className="col-6 p-4 d-flex flex-column">
           <h3 className="card-title text-primary">Horarios</h3>
           <ul className="list-group list-group-flush mb-3">
             <li className="list-group-item bg-transparent d-flex align-items-center">
@@ -26,8 +26,8 @@ const CardMap = () => {
             </p>
           </div>
         </div>
-        <div className="col-md-6 bg-light">
-          <div className="h-100 w-100" style={{minHeight: '300px'}}>
+        <div className="col-6 bg-light">
+          <div className="h-100 w-100">
             <Mapa/>
           </div>
         </div>
@@ -54,10 +54,10 @@ const CardMap = () => {
               Casa de la Cultura Ateneo, El Roble, Av. Guayana, San Félix, Ciudad Guayana, Edo. Bolívar
             </p>
           </div>
+          <div className="row border-0 card-map-mobile" style={{height: '300px'}}>
+            <Mapa />
+          </div>
         </div>
-      </div>
-      <div className="row border-0 card-map-mobile" style={{height: '300px'}}>
-        <Mapa />
       </div>
     </div>
   );

@@ -154,8 +154,6 @@
   }
 
   .card { border-radius: 5px 5px 0 0; }
-  .card-map-pc { display: block; }
-  .card-map-mobile { display: none; }
 }
 
 @media (max-width: 768px) {
@@ -194,6 +192,11 @@
   .sobre-nosotros-container { width: 350px; } 
 }
 
+@media (min-width: 576px) {
+  .card-map-pc { display: block !important; }
+  .card-map-mobile { display: none !important; }
+}
+
 @media (max-width: 575px) {
   .decoracion-titulo { 
     width: 80px; 
@@ -225,8 +228,8 @@
   }
 
   .card { border-radius: 5px 5px 0 0; }
-  .card-map-pc { display: none; }
-  .card-map-mobile { display: block; }
+  .card-map-pc { display: none !important; }
+  .card-map-mobile { display: block !important; }
 }
 
 @media (max-width: 414px) {
@@ -262,8 +265,8 @@
   .ubicacion-container { height: 200px; }
 
   .card { border-radius: 5px 5px 0 0; }
-  .card-map-pc { display: none; }
-  .card-map-mobile { display: block; }
+  .card-map-pc { display: none !important; }
+  .card-map-mobile { display: block !important; }
 }
 
 /* Collection Page */

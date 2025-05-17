@@ -2,7 +2,7 @@ import React from 'react'
 
 const Mapa = () => {
   return (
-    <div className="container-fluid h-100">
+    <div className="container-fluid" style={{height: '300px'}}>
       <div className="row h-100">
         <div className="col-lg-8 col-md-10 col-12 w-100">
           <iframe 
