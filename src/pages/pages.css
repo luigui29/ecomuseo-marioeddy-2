@@ -67,13 +67,16 @@
   bottom: -50px; 
   z-index: 1;
 }
-#decoracion-izquierda {   right: 500px;  }
+#decoracion-izquierda {   left: -120px;  }
+#decoracion-derecha { right: -120px; }
 .homepage-titulo { z-index: 3; }
 .nuestro-museo-desc {
   margin-top: 20px;
   padding: min(1rem, 8%);
   color: white;
   text-align: justify;
+  font-size: 2rem;
+  z-index: 99;
 }
 .misvis-desc {
   font-family: 'Amarante';
@@ -81,6 +84,9 @@
   border-radius: 10px;
   overflow-y: scroll;
   color: white;
+  height: 30vh;
+  font-size: 1.6rem;
+  padding: 12px; 
 }
 
 .sobre-nosotros-container { margin-bottom: 40px }
@@ -121,24 +127,29 @@
   height: 200px;
   display: flex;
   justify-content: center;
-  overflow: hidden;
 }
 #visitanos-titere-1 {
   position: absolute;
   z-index: 1;
   transform: scaleX(-1);
+  width: 25%;
+  bottom: -50px;
+  left: 100px;
 }
 .visitanos-text {
   position: absolute;
   text-align: center; 
   text-shadow: 1px 0 5px var(--gcolor-5);
-  top: 30%;
-  font-size: 150px;
+  top: -60px;
+  font-size: 6.4rem;
   z-index: 3;
 }
 #visitanos-titere-2 {
   position: absolute;
   z-index: 1;
+  width: 35%;
+  bottom: -80px;
+  right: 100px;
 }
 
 .ubicacion-div {
@@ -148,9 +159,41 @@
   z-index: 9;
 }
 
+@media (min-width: 1000px) { 
+  .ubicacion-div { min-height: 70vh !important; }
+  .ubicacion-container { height: 100% !important; } 
+
+  .visitanos-div { margin-top: 30vh; }
+}
+
+
 @media (max-width: 992px) {
+  .decoracion-titulo { 
+    width: 260px; 
+    bottom: 20px;
+  }
+  #decoracion-derecha { right: -150px; }
+  #decoracion-izquierda { left: -150px; }
+  .nuestro-museo-desc { font-size: 1.3rem; }
+
+  .misvis-desc { 
+    height: 200px;
+    font-size: 1.4rem;
+    padding: 12px; 
+  }
+
   .visitanos-text {
     font-size: 100px;
+  }
+  #visitanos-titere-1 {
+    width: 20%;
+    left: 40px;
+    bottom: -20px; 
+  }
+  #visitanos-titere-2 { 
+    width: 30%;
+    right: 40px;
+    bottom: -40px; 
   }
 
   .card { border-radius: 5px 5px 0 0; }
@@ -175,9 +218,11 @@
     font-size: 1rem;
     padding: 12px; 
   }
-
   .visitanos-div { height: 300px; }
-  .visitanos-text { top: 50%; }
+  .visitanos-text { 
+    top: 40%; 
+    font-size: 5rem;
+  }
   #visitanos-titere-1 {
     width: 25%;
     left: 40px;
@@ -193,8 +238,10 @@
 }
 
 @media (min-width: 576px) {
-  .card-map-pc { display: block !important; }
+  .card-map-pc { display: flex !important; }
   .card-map-mobile { display: none !important; }
+
+  .map-container { padding: 0; }
 }
 
 @media (max-width: 575px) {
@@ -216,6 +263,10 @@
   .sobre-nosotros-container { width: 350px; } 
   .autor-img-col { width: 50%; }
 
+  .visitanos-text { 
+    top: 60%; 
+    font-size: 3.2rem;
+  }
   #visitanos-titere-1 {
     width: 25%;
     left: 40px;
@@ -251,6 +302,10 @@
   .autor-caption { font-size: 2.6rem; }
   .historia-background { font-size: 0.8rem; }
 
+  .visitanos-text { 
+    top: 65%; 
+    font-size: 2.4rem;
+  }
   #visitanos-titere-1,
   #visitanos-titere-2 { bottom: -30px; }
   #visitanos-titere-1 {

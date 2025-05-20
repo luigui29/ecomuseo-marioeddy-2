@@ -42,7 +42,7 @@ const HomePage = () => {
             </div>
           </div>
           <div className="container">
-            <div className="row nuestro-museo-desc caption-font">
+            <div className="row nuestro-museo-desc caption-font position-relative">
               Fundado en 2024, Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Lorem Ipsum.
             </div>
             <div className="row">
@@ -60,28 +60,33 @@ const HomePage = () => {
         
         {/* Sección Sobre Nosotros */}
         <div className='container sobre-nosotros-container'>
-          <div className="row mt-5">
-            <div className="col px-0 autor-img-col">
-              <div className="position-relative d-flex justify-content-center autor-background-fadeout">
-                <img className='ecomuseo-autor-img' src={eddy_foto} alt="Eddy Salazar"/>
-                <h3 className='position-absolute caption-font autor-caption mb-0'><span>Eddy </span><span>Salazar </span></h3>
+          <div className="row gx-5">
+            <div className="col-md-6">
+              <div className="row mt-5">
+                <div className="col px-0 autor-img-col">
+                  <div className="position-relative d-flex justify-content-center autor-background-fadeout">
+                    <img className='ecomuseo-autor-img' src={eddy_foto} alt="Eddy Salazar"/>
+                    <h3 className='position-absolute caption-font autor-caption mb-0'><span>Eddy </span><span>Salazar </span></h3>
+                  </div>
+                </div>
+              </div>
+              <div className="row d-flex flex-column historia-background">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora molestiae architecto quae, nihil eligendi sequi alias labore aut explicabo porro nemo natus ut, doloremque, consequuntur consectetur in assumenda sapiente id.
               </div>
             </div>
-          </div>
-          <div className="row d-flex flex-column historia-background">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora molestiae architecto quae, nihil eligendi sequi alias labore aut explicabo porro nemo natus ut, doloremque, consequuntur consectetur in assumenda sapiente id.
-          </div>
-
-          <div className="row mt-5">
-            <div className="col px-0 autor-img-col">
-              <div className="position-relative d-flex justify-content-center autor-background-fadeout">
-                <img className='ecomuseo-autor-img' src={mario_foto} alt="Mario Pereira"/>
-                <h3 className='position-absolute caption-font autor-caption mb-0'><span>Mario </span><span>Pereira </span></h3>
+            <div className="col-md-6">
+              <div className="row mt-5">
+                <div className="col px-0 autor-img-col">
+                  <div className="position-relative d-flex justify-content-center autor-background-fadeout">
+                    <img className='ecomuseo-autor-img' src={mario_foto} alt="Mario Pereira"/>
+                    <h3 className='position-absolute caption-font autor-caption mb-0'><span>Mario </span><span>Pereira </span></h3>
+                  </div>
+                </div>
+              </div>
+              <div className="row d-flex flex-column historia-background">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora molestiae architecto quae, nihil eligendi sequi alias labore aut explicabo porro nemo natus ut, doloremque, consequuntur consectetur in assumenda sapiente id.
               </div>
             </div>
-          </div>
-          <div className="row d-flex flex-column historia-background">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora molestiae architecto quae, nihil eligendi sequi alias labore aut explicabo porro nemo natus ut, doloremque, consequuntur consectetur in assumenda sapiente id.
           </div>
         </div>
 
@@ -94,8 +99,8 @@ const HomePage = () => {
         </div>
 
         {/* Sección Ubicación */}
-        <div className='ubicacion-div py-0'>
-            <div className="container ubicacion-container mx-0 h-auto p-3 mw-100">
+        <div className='ubicacion-div'>
+            <div className="container ubicacion-container mx-0 h-auto mw-100">
               <CardMap />
             </div>
         </div>

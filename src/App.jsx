@@ -13,7 +13,7 @@ function App() {
  
 
   return (
-    <div className="App" style={{height: "inherit"}}>
+    <div className="App" style={{height: "inherit", overflowX: 'hidden'}}>
       <Navbar/>
       <Router>
       <Routes>
