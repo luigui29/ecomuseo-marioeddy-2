@@ -1,12 +1,9 @@
 import React from 'react';
-import { getObras, getTiteres, getAutores } from '../../Components/utils/ApiFun.js'; // Asegúrate de importar getActors y getAuthors
+import { getObras, getTiteres, getAutores } from '../../Components/utils/ApiFun.js'; 
 import { useEffect, useState } from 'react';
 import styles from './Obras.module.css';
 
-// =========================================================================
-// COMPONENTE ObraItem
-// Ahora recibe 'allActors' y 'allAuthors' como props
-// =========================================================================
+
 const ObraItem = ({ obra, allActors, allAuthors }) => {
   if (!obra) {
     return (
