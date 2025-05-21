@@ -1,85 +1,82 @@
-import React from 'react'
-import { getObras } from '../../Components/utils/ApiFun.js'
-import { useEffect, useState } from 'react'
-import styles from './Obras.module.css'
+import React from 'react';
+import { getObras, getTiteres, getAutores } from '../../Components/utils/ApiFun.js'; // Asegúrate de importar getActors y getAuthors
+import { useEffect, useState } from 'react';
+import styles from './Obras.module.css';
 
-const ObraItem = ({ obra }) => {
-  // Verificar si obra existe
+// =========================================================================
+// COMPONENTE ObraItem
+// Ahora recibe 'allActors' y 'allAuthors' como props
+// =========================================================================
+const ObraItem = ({ obra, allActors, allAuthors }) => {
   if (!obra) {
     return (
-      <div className={`container ${ styles.collectionItemContainer} w-75`}>
+      <div className={`container ${styles.collectionItemContainer} w-75`}>
         <div className='text-center p-5'>
           <h3>No hay datos disponibles</h3>
         </div>
       </div>
-    )
+    );
   }
 
-  // Obtener valores con fallbacks
-  const imagen = obra.imagen || 'https://picsum.photos/600/400?random=2'
-  const titulo = obra.titulo || 'Obra sin título'
-  
-  // Manejar descripción que puede ser un objeto o string
-  let descripcionTexto = 'No hay descripción disponible'
+  const imagen = obra.imagen || 'https://picsum.photos/600/400?random=2';
+  const titulo = obra.titulo || 'Obra sin título';
+
+  let descripcionTexto = 'No hay descripción disponible';
   if (obra.descripcion) {
     if (typeof obra.descripcion === 'string') {
-      descripcionTexto = obra.descripcion
-    } else if (typeof obra.descripcion === 'object') {
-      // Si es un objeto, intentar convertirlo a string o usar una propiedad relevante
-      descripcionTexto = obra.descripcion.texto || JSON.stringify(obra.descripcion)
+      descripcionTexto = obra.descripcion;
+    } else if (typeof obra.descripcion === 'object' && obra.descripcion !== null) {
+      descripcionTexto = obra.descripcion.texto || JSON.stringify(obra.descripcion);
     }
   }
-  
-  // Normalizar autores para evitar renderizar objetos
-  let autoresArray = [];
-  if (Array.isArray(obra.autores)) {
-    autoresArray = obra.autores;
-  } else if (obra.autores && typeof obra.autores === 'object') {
-    // Si es un objeto único, ponerlo en un array
-    autoresArray = [obra.autores];
-  } else if (typeof obra.autores === 'string') {
-    // Si es un string, ponerlo en un array
-    autoresArray = [obra.autores];
+
+  // --- OBTENER ACTOR PRINCIPAL ---
+  // El ID del actor principal viene directamente en el objeto 'obra'
+  const idActorPrincipal = obra.idactor;
+  let nombreActorPrincipal = 'Actor principal desconocido';
+  if (idActorPrincipal && allActors && Array.isArray(allActors)) {
+    const foundActor = allActors.find(actor => actor.idactor === idActorPrincipal);
+    if (foundActor) {
+      nombreActorPrincipal = foundActor.descripcion;
+    }
   }
 
-  // Debug: Ver los datos de autores
-  console.log('Datos de autores:', obra.autores);
-  
-  // Extraer nombres de autores, si existen
-  const autoresTexto = autoresArray.map(a => {
-    // Si es un string, usarlo directamente
-    if (typeof a === 'string') return a;
-    // Si es un objeto, usar la propiedad autor.descripcion si existe
-    if (typeof a === 'object' && a !== null) {
-      return a.autor?.descripcion || '';
+  // --- OBTENER AUTOR PRINCIPAL ---
+  // El ID del autor principal viene directamente en el objeto 'obra'
+  const idAutorPrincipal = obra.idautor;
+  let nombreAutorPrincipal = 'Autor principal desconocido';
+  if (idAutorPrincipal && allAuthors && Array.isArray(allAuthors)) {
+    const foundAuthor = allAuthors.find(author => author.idautor === idAutorPrincipal);
+    if (foundAuthor) {
+      nombreAutorPrincipal = foundAuthor.descripcion;
     }
-    return '';
-  }).filter(Boolean).join(', ') || 'Autor desconocido';
-
-  // Debug: Ver los datos de actores
-  console.log('Datos de actores:', obra.actores);
-  
-  // Normalizar actores para evitar renderizar objetos
-  let actoresArray = [];
-  if (Array.isArray(obra.actores)) {
-    actoresArray = obra.actores;
-  } else if (obra.actores && typeof obra.actores === 'object') {
-    actoresArray = [obra.actores];
-  } else if (typeof obra.actores === 'string') {
-    actoresArray = [obra.actores];
   }
-  // Extraer nombres de actores, si existen
-  const actoresTexto = actoresArray.map(a => {
-    // Si es un string, usarlo directamente
-    if (typeof a === 'string') return a;
-    // Si es un objeto, usar la propiedad actor.descripcion si existe
-    if (typeof a === 'object' && a !== null) {
-      return a.actor?.descripcion || '';
-    }
-    return '';
-  }).filter(Boolean).join(', ') || 'Actor desconocido';
 
-  const anio = obra.anio || '';
+  // --- PROCESAR ACTORES ADICIONALES (del array anidado 'actores') ---
+  let actoresAdicionalesTexto = '';
+  if (Array.isArray(obra.actores) && obra.actores.length > 0) {
+    // Filtramos los actores anidados para excluir el principal (si es que aparece ahí también)
+    // y mapeamos a sus descripciones
+    const filteredActores = obra.actores
+      .filter(a => a.idactor !== idActorPrincipal) // Excluye al actor principal ya manejado
+      .map(a => a.actor?.descripcion) // Accede a la descripción dentro del objeto 'actor' anidado
+      .filter(Boolean); // Elimina valores nulos/vacíos
+
+    actoresAdicionalesTexto = filteredActores.join(', ');
+  }
+
+  // --- PROCESAR AUTORES ADICIONALES (del array anidado 'autores') ---
+  let autoresAdicionalesTexto = '';
+  if (Array.isArray(obra.autores) && obra.autores.length > 0) {
+    // Filtramos los autores anidados para excluir el principal (si es que aparece ahí también)
+    // y mapeamos a sus descripciones
+    const filteredAutores = obra.autores
+      .filter(a => a.idautor !== idAutorPrincipal) // Excluye al autor principal ya manejado
+      .map(a => a.autor?.descripcion) // Accede a la descripción dentro del objeto 'autor' anidado
+      .filter(Boolean); // Elimina valores nulos/vacíos
+
+    autoresAdicionalesTexto = filteredAutores.join(', ');
+  }
 
   return (
     <div className={`container ${styles.collectionItemContainer} ${styles.w75}`}>
@@ -90,81 +87,129 @@ const ObraItem = ({ obra }) => {
           </div>
           <div className={`col-4 ${styles.itemContent}`}>
             <h2 className={`item-title ${styles.itemTitle}`}>{titulo}</h2>
-            {anio && <div className={`item-year ${styles.itemYear}`}>Año: {anio}</div>}
             <div className={`item-description ${styles.itemDescription}`}>
               {descripcionTexto}
             </div>
           </div>
         </div>
-        
-        {autoresTexto.length > 0 && (
+
+        {/* Sección de Autor Principal */}
+        {nombreAutorPrincipal && nombreAutorPrincipal !== 'Autor principal desconocido' && (
           <div className={styles.relatedSection}>
-            <div className={styles.relatedHeader}>Autores</div>
+            <div className={styles.relatedHeader}>Autor Principal</div>
             <div className={styles.relatedContent}>
-              <div className={styles.relatedItem}>{autoresTexto}</div>
+              <div className={styles.relatedItem}>**{nombreAutorPrincipal}**</div>
             </div>
           </div>
         )}
-        {actoresTexto.length > 0 && (
+
+        {/* Sección de Autores Adicionales */}
+        {autoresAdicionalesTexto.length > 0 && (
           <div className={styles.relatedSection}>
-            <div className={styles.relatedHeader}>Actores</div>
+            <div className={styles.relatedHeader}>Otros Autores</div>
             <div className={styles.relatedContent}>
-              <div className={styles.relatedItem}>{actoresTexto}</div>
+              <div className={styles.relatedItem}>{autoresAdicionalesTexto}</div>
             </div>
           </div>
         )}
+
+        {/* Sección de Actor Principal */}
+        {nombreActorPrincipal && nombreActorPrincipal !== 'Actor principal desconocido' && (
+          <div className={styles.relatedSection}>
+            <div className={styles.relatedHeader}>Actor Principal</div>
+            <div className={styles.relatedContent}>
+              <div className={styles.relatedItem}>**{nombreActorPrincipal}**</div>
+            </div>
+          </div>
+        )}
+
+        {/* Sección de Actores Adicionales */}
+        {actoresAdicionalesTexto.length > 0 && (
+          <div className={styles.relatedSection}>
+            <div className={styles.relatedHeader}>Otros Actores</div>
+            <div className={styles.relatedContent}>
+              <div className={styles.relatedItem}>{actoresAdicionalesTexto}</div>
+            </div>
+          </div>
+        )}
+
       </div>
     </div>
-  )
-}
+  );
+};
+
+
+
 
 const Obras = () => {
-  const [obras, setObras] = useState([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
+  const [obras, setObras] = useState([]);
+  const [allActors, setAllActors] = useState([]); // Nuevo estado para todos los actores
+  const [allAuthors, setAllAuthors] = useState([]); // Nuevo estado para todos los autores
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchObras = async () => {
+    const fetchData = async () => { // Renombrado a fetchData para cargar todo
       try {
-        setLoading(true)
-        const response = await getObras()
-        // Verificamos que la respuesta tenga la estructura esperada
-        if (response && response.success && Array.isArray(response.data)) {
-          setObras(response.data)
+        setLoading(true);
+
+        // Cargar Obras
+        const obrasResponse = await getObras();
+        if (obrasResponse && obrasResponse.success && Array.isArray(obrasResponse.data)) {
+          setObras(obrasResponse.data);
         } else {
-          console.error('Los datos de obras no tienen el formato esperado:', response)
-          setObras([])
-          setError('Los datos recibidos no tienen el formato esperado')
+          console.error('Los datos de obras no tienen el formato esperado:', obrasResponse);
+          setObras([]);
+          setError('Los datos de obras recibidos no tienen el formato esperado');
         }
+
+        // Cargar Todos los Actores
+        const actorsResponse = await getTiteres();
+        if (actorsResponse && actorsResponse.success && Array.isArray(actorsResponse.data)) {
+          setAllActors(actorsResponse.data);
+        } else {
+          console.error('Los datos de actores no tienen el formato esperado:', actorsResponse);
+          setAllActors([]); // Asegurarse de que sea un array vacío si hay un error
+        }
+
+        // Cargar Todos los Autores
+        const authorsResponse = await getAutores();
+        if (authorsResponse && authorsResponse.success && Array.isArray(authorsResponse.data)) {
+          setAllAuthors(authorsResponse.data);
+        } else {
+          console.error('Los datos de autores no tienen el formato esperado:', authorsResponse);
+          setAllAuthors([]); // Asegurarse de que sea un array vacío si hay un error
+        }
+
       } catch (err) {
-        console.error('Error al cargar obras:', err)
-        setError('Error al cargar los datos de obras')
+        console.error('Error al cargar datos:', err);
+        setError('Error al cargar los datos.');
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
-    }
-    fetchObras()
-  }, [])
+    };
+    fetchData();
+  }, []); // El array de dependencias vacío significa que se ejecuta solo una vez al montar el componente
 
   if (loading) {
     return (
       <div className='museum-background'>
         <div className={styles.obrasContainer}>
-          <div className="pb-5" style={{paddingTop: "12rem"}}>
+          <div className="pb-5" style={{ paddingTop: "12rem" }}>
             <div className="text-center text-white">
-              <h3>Cargando obras...</h3>
+              <h3>Cargando obras y datos relacionados...</h3>
             </div>
           </div>
         </div>
       </div>
-    )
+    );
   }
 
   if (error) {
     return (
       <div className='museum-background'>
         <div className={styles.obrasContainer}>
-          <div className="pb-5" style={{paddingTop: "12rem"}}>
+          <div className="pb-5" style={{ paddingTop: "12rem" }}>
             <div className="text-center text-white">
               <h3>Error: {error}</h3>
               <p>Por favor, intenta nuevamente más tarde.</p>
@@ -172,25 +217,14 @@ const Obras = () => {
           </div>
         </div>
       </div>
-    )
+    );
   }
 
   return (
     <div className='museum-background'>
       <div className={styles.obrasContainer}>
-        <div className="pb-5" style={{paddingTop: "12rem"}}>
-          {loading && (
-            <div className={styles.loading}>
-              <h3>Cargando obras...</h3>
-            </div>
-          )}
-
-          {error && (
-            <div className={styles.error}>
-              <h3>Error: {error}</h3>
-              <p>Por favor, intenta nuevamente más tarde.</p>
-            </div>
-          )}
+        <div className="pb-5" style={{ paddingTop: "12rem" }}>
+          {/* ... (Tu lógica de carga y error ya existente) */}
 
           {!loading && !error && obras.length === 0 && (
             <div className="text-center text-white">
@@ -199,7 +233,12 @@ const Obras = () => {
           )}
           {obras.length > 0 ? (
             obras.map((obra, index) => (
-              <ObraItem key={obra.id || `obra-${index}`} obra={obra} />
+              <ObraItem
+                key={obra.idhistory || `obra-${index}`} // Usar idhistory que viene en tu API
+                obra={obra}
+                allActors={allActors} // Pasar todos los actores como prop
+                allAuthors={allAuthors} // Pasar todos los autores como prop
+              />
             ))
           ) : (
             <div className="text-center text-white">
@@ -209,7 +248,7 @@ const Obras = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Obras
+export default Obras;

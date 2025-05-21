@@ -19,6 +19,7 @@ const TitereItem = ({ titere }) => {
   // Obtener valores con fallbacks
   const imagen = titere.imagen || 'https://picsum.photos/600/400?random=3'
   const nombre = titere.descripcion || 'Títere sin nombre'
+  const caracteristicas = titere.caracteristicas
   const obras = titere.obras || []
 
   return (
@@ -30,6 +31,7 @@ const TitereItem = ({ titere }) => {
           </div>
           <div className={`col-4 ${styles.itemContent}`}>
             <h2 className={`item-title ${styles.itemTitle}`}>{nombre}</h2>
+            <h3 className={`item-title ${styles.itemTitle}`}>{caracteristicas}</h3>
           </div>
         </div>
         
@@ -45,7 +47,7 @@ const TitereItem = ({ titere }) => {
                     tituloObra = obra;
                   } else if (typeof obra === 'object') {
                     // Si es un objeto, intentar obtener el título de la obra
-                    tituloObra = obra.titulo || obra.nombre || JSON.stringify(obra);
+                    tituloObra = obra.titulo  || JSON.stringify(obra);
                   } else {
                     tituloObra = 'Obra desconocida';
                   }

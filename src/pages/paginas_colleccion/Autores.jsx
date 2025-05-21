@@ -18,6 +18,7 @@ const AutorItem = ({ autor }) => {
   // Obtener valores con fallbacks
   const imagen = autor.imagen || 'https://picsum.photos/600/400?random=1'
   const nombre = autor.descripcion || 'Autor sin nombre'
+  const reseña  = autor.resenia
   
   const obras = autor.obras || []
 
@@ -30,6 +31,7 @@ const AutorItem = ({ autor }) => {
           </div>
           <div className="col-4 item-content">
             <h2 className="item-title">{nombre}</h2>
+            <h3 className='item-title'>{reseña}</h3>
           </div>
         </div>
         
