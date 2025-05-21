@@ -4,11 +4,12 @@
 
 #ecomuseo-icon {
   position: absolute;
-   top: 0;
+  top: 0;
+  width: 100px;
 }
 
 #ecomuseo-title {
-  margin-left: 100px;
+  margin-left: 150px;
   font-family: 'Amaranta';
 }
 
@@ -17,15 +18,35 @@ ul.navbar-nav.ms-auto {
   font-family: 'Amaranta';
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px), (max-width: 992px) {
   ul.navbar-nav.ms-auto > li {
     padding-inline-end: 0.5rem;
   }
+
+  #ecomuseo-icon {
+    width: 90px;
+    margin-left: -30px;
+  }
+
+  #ecomuseo-title { margin-left: 100px; }
+  
+  .navbar-brand {
+    padding-top: 15px;
+    font-size: 16px;
+  }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 414px), (max-width: 577px) {
+  #ecomuseo-icon {
+    width: 70px;
+    margin-left: 10px;
+  }
+  
+  #ecomuseo-title { margin-left: 100px; }
+
   .navbar-brand {
-    font-size: 13px;
+    padding-top: 15px;
+    font-size: 16px;
   }
 }
 

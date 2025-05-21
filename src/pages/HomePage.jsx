@@ -3,7 +3,7 @@ import React from 'react'
 // Components
 
 import Hero from '../Components/Hero.jsx'
-import BigCard from '../Components/BigCard.jsx'
+import CardMap from '../Components/CardMap.jsx'
 import Footer from '../Components/sections/Footer.jsx'
 
 // Assets
@@ -24,7 +24,7 @@ const HomePage = () => {
         <section className="my-5">
           <div className="container">
             <div className="row justify-content-center">
-              <div className="col-auto align-items-center position-relative">
+              <div className="col align-items-center position-relative">
                 <img 
                   src={decoracion_i} 
                   alt="decoración izquierda" 
@@ -41,28 +41,52 @@ const HomePage = () => {
               </div>
             </div>
           </div>
+          <div className="container">
+            <div className="row nuestro-museo-desc caption-font position-relative">
+              Fundado en 2024, Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Lorem Ipsum.
+            </div>
+            <div className="row">
+              <div className="col-6 d-flex flex-column">
+                <div className='subtitle-font' style={{margin: '0 auto'}}> Visión </div>
+                <div className='misvis-desc'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum sed iste magnam eligendi totam, deserunt distinctio mollitia minima error accusantium rerum reiciendis doloremque iure, voluptas aliquid provident, eaque explicabo itaque.</div>
+              </div>
+              <div className="col-6 d-flex flex-column">
+                <div className='subtitle-font' style={{margin: '0 auto'}}> Misión </div>
+                <div className='misvis-desc'> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi ex animi repudiandae fugiat odio ullam molestias enim, earum fugit beatae est! Aliquid voluptas labore cupiditate aliquam a expedita amet eligendi. </div>
+              </div>
+            </div>
+          </div>
         </section>
         
         {/* Sección Sobre Nosotros */}
-        <div className='container' style={{marginBottom: '200px'}}>
-          <div className="row">
-            <div className="col-6">
-              <div className="row d-flex flex-wrap justify-content-center">
-                <img src={eddy_foto} alt="Eddy Salazar" style={{width:"50%"}}/>
+        <div className='container sobre-nosotros-container'>
+          <div className="row gx-5">
+            <div className="col-md-6">
+              <div className="row mt-5">
+                <div className="col px-0 autor-img-col">
+                  <div className="position-relative d-flex justify-content-center autor-background-fadeout">
+                    <img className='ecomuseo-autor-img' src={eddy_foto} alt="Eddy Salazar"/>
+                    <h3 className='position-absolute caption-font autor-caption mb-0'><span>Eddy </span><span>Salazar </span></h3>
+                  </div>
+                </div>
               </div>
-              <div className="row d-flex flex-wrap justify-content-center">Eddy Salazar</div>
-            </div>
-            <div className="col-6">
-              <div className="row d-flex flex-wrap justify-content-center">
-                <img src={mario_foto} alt="Mario Pereira" style={{width:"50%"}}/>
+              <div className="row d-flex flex-column historia-background">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora molestiae architecto quae, nihil eligendi sequi alias labore aut explicabo porro nemo natus ut, doloremque, consequuntur consectetur in assumenda sapiente id.
               </div>
-              <div className="row d-flex flex-wrap justify-content-center">Mario Pereira</div>
             </div>
-          </div>
-          {/* Texto Historia */}
-          <div className="row-6">
-            <div className="row">Fundados en 2024</div>
-            <div className="row">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora molestiae architecto quae, nihil eligendi sequi alias labore aut explicabo porro nemo natus ut, doloremque, consequuntur consectetur in assumenda sapiente id.</div>
+            <div className="col-md-6">
+              <div className="row mt-5">
+                <div className="col px-0 autor-img-col">
+                  <div className="position-relative d-flex justify-content-center autor-background-fadeout">
+                    <img className='ecomuseo-autor-img' src={mario_foto} alt="Mario Pereira"/>
+                    <h3 className='position-absolute caption-font autor-caption mb-0'><span>Mario </span><span>Pereira </span></h3>
+                  </div>
+                </div>
+              </div>
+              <div className="row d-flex flex-column historia-background">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora molestiae architecto quae, nihil eligendi sequi alias labore aut explicabo porro nemo natus ut, doloremque, consequuntur consectetur in assumenda sapiente id.
+              </div>
+            </div>
           </div>
         </div>
 
@@ -76,13 +100,10 @@ const HomePage = () => {
 
         {/* Sección Ubicación */}
         <div className='ubicacion-div'>
-          <section className="py-0 bg-light border border-2 mb-5 ms-5 me-5">
-            <div className="container mx-0 px-0 mw-100">
-              <BigCard/>
+            <div className="container ubicacion-container mx-0 h-auto mw-100">
+              <CardMap />
             </div>
-          </section>
         </div>
-        
       </main>
       
      <Footer/>
