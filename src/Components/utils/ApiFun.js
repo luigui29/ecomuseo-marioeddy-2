@@ -1,5 +1,5 @@
 // URL base para la API
-const API_URL = import.meta.env.VITE_URL_BASE || 'http://localhost:3000';
+const API_URL = "https://historias-api-crud-v2.vercel.app";
 
 // Funciones de API que extraen el array de datos de la respuesta
 export const getAutores = async () => {
