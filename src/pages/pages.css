@@ -325,6 +325,11 @@
 }
 
 /* Collection Page */
+.collection-page-div {
+  height: 100vh;
+  overflow: hidden;
+}
+
 .collection-header {
   left: 24%;
 }
@@ -377,9 +382,43 @@
   bottom: 62%;
 }
 
+@media (max-height: 1200px) {
+  #collection-decoration-div {
+    top: 90%;
+  }
+}
+
+@media (max-height: 950px) {
+  #collection-decoration-div {
+    top: 80%;
+  }
+}
+
+@media (max-height: 638px) {
+  .collection-page-div { height: 170vh; }
+  #collection-decoration-div {
+    top: 80%;
+  }
+}
+
+@media (max-height: 414px) {
+  .collection-page-div { height: 214vh; }
+  #collection-decoration-div { top: 90%; }
+}
+
 @media (min-width: 992px) {
   .collection-title {margin-top: 180px;}
-  #collection-titere-2 {bottom: 43%;}
+  .collection-links {bottom: -200px;}
+  #collection-mario {
+    width: 22%;
+    bottom: 0;
+  }
+  #collection-titere-1 {
+    width: 15%;
+    bottom: 30%;
+  }
+  #collection-titere-2 {bottom: -3%;}
+  #collection-obra {bottom: 35%;}
 }
 
 @media (max-width: 992px) {
@@ -387,7 +426,6 @@
     margin-top: 155px;
   }
 }
-
 @media (max-width: 767px) {
   .collection-title {
     margin-top: 130px;
@@ -395,7 +433,6 @@
   .collection-links {
     display: flex;
     flex-direction: column;
-    align-items: center;
     bottom: -370px;
   }
   .collection-links div { 
@@ -421,16 +458,6 @@
     width: 17%;
     bottom: 53%;
   }
-}
-
-/* Autores - Obras - Títeres */
-.collection-item-container {
-  background-color: var(--gcolor-6);
-  margin-top: 50px;
-}
-
-.collection-item-container:nth-child(1) {
-  margin-top: 70px;
 }
 
 /* Talleres */

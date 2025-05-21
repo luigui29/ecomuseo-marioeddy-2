@@ -16,7 +16,7 @@ const Collection = () => {
       <main>
         <div className='position-relative'>
           {/* Header y Cortinas */}
-          <div className='position-relative' style={{height: "100vh", overflow: "hidden"}}>
+          <div className='position-relative collection-page-div'>
             <img src={cortinas} alt="cortinas" className='position-absolute w-100 mt-5'/>
             <div className='position-absolute collection-header'>
               <h2 className='subtitle-font collection-title'>Colección</h2>
