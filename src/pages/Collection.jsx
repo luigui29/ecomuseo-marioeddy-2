@@ -5,33 +5,40 @@ import Footer from '../Components/sections/Footer.jsx'
 
 //Assets
 import cortinas from '../assets/decoraciones/curtains.png'
-import titiriteros from '../assets/titiriteros-1.png'
+import mario from '../assets/marioeddy3.png'
+import titere_1 from '../assets/titeres-1.png'
+import titere_2 from '../assets/titeres5.png'
+import obra from '../assets/obra3.png'
 
 const Collection = () => {
   return (
-    <div className='museum-background' style={{height: "inherit"}}>
-      <main style={{height: "inherit"}}>
-        <div className='position-relative' style={{height: "inherit"}}>
+    <div className='museum-background'>
+      <main>
+        <div className='position-relative'>
           {/* Header y Cortinas */}
-          <div className='position-relative museum-background' style={{height: "100vh", overflow: "hidden"}}>
+          <div className='position-relative' style={{height: "100vh", overflow: "hidden"}}>
             <img src={cortinas} alt="cortinas" className='position-absolute w-100 mt-5'/>
-            <h2 className='position-absolute subtitle-font collection-title mb-0'>Colección</h2>      
-          </div>
-          { /* Ir a Colección */}
-          <div className="row position-absolute collection-links">
-            <div className='col-4 text-center'>
-              <div className="row-2">
-                <a href="/autores">autores</a>
-              </div>
-              <div className="row-10">
-                <img src={titiriteros} alt="titiriteros" style={{width: "30%"}}/>
+            <div className='position-absolute collection-header'>
+              <h2 className='subtitle-font collection-title'>Colección</h2>
+              <div className="row position-absolute collection-links">
+                <div className='col-4 text-center caption-font'><a className='c-link' href="/autores">Autores</a></div>
+                <div className='col-4 text-center caption-font'><a className='c-link' href="/obras">Obras</a></div>
+                <div className='col-4 text-center caption-font'><a className='c-link' href="/titeres">Títeres</a></div>
+              </div>   
+            </div>
+            { /* Decoración */ }
+            <div className="position-relative" id="collection-decoration-div">
+              <div className="row position-relative" style={{minHeight: '53vh'}}>
+                <img src={mario} alt="mario" className='collection-decoration' id='collection-mario' />
+                <img src={titere_1} alt="titere" className='collection-decoration' id='collection-titere-1'/>
+                <img src={titere_2} alt="titere" className='collection-decoration' id='collection-titere-2'/>
+                <img src={obra} alt="papagayo" className='collection-decoration' id='collection-obra' />
               </div>
             </div>
-            <div className='col-4 text-center'><a href="/obras">obras</a></div>
-            <div className='col-4 text-center'><a href="/titeres">títeres</a></div>
-          </div> 
+          </div>
         </div>
       </main>
+
       <Footer />
     </div>
   )

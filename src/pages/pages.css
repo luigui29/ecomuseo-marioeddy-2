@@ -325,25 +325,61 @@
 }
 
 /* Collection Page */
+.collection-header {
+  left: 24%;
+}
 
 .collection-title { 
   line-height: 1;
   font-size: 16vw;
-  left: 24%;
   text-shadow: 1px 0 5px var(--gcolor-5);
 }
 
 .collection-links {
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+  bottom: -120px;
+  left: 5%;
+  width: 100%;
 }
 
-@media (min-width: 993px) {
-  .collection-title {
-    margin-top: 180px;
-  }
+.c-link {
+  color: white;
+  font-size: 2.4vw;
+}
+
+#collection-decoration-div { 
+  top: 80%; 
+  width: 100%;
+  height: 53vh;
+}
+
+.collection-decoration { 
+  position: absolute; 
+}
+#collection-mario {
+  width: 27%;
+  left: 0;
+  bottom: calc(53vh - calc(53vh * 0.69));
+}
+#collection-titere-1 {
+  width: 17%;
+  left: 40%;
+  bottom: calc(53vh - calc(53vh * 0.43));
+}
+#collection-titere-2 {
+  width: 14%;
+  left: 59%;
+  bottom: 48%;
+  z-index: 8;
+}
+#collection-obra {
+  width: 34%;
+  right: 0;
+  bottom: 62%;
+}
+
+@media (min-width: 992px) {
+  .collection-title {margin-top: 180px;}
+  #collection-titere-2 {bottom: 43%;}
 }
 
 @media (max-width: 992px) {
