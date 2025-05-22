@@ -1,4 +1,4 @@
-.titeres-container {
+.titeresContainer {
   padding: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -8,6 +8,7 @@
 }
 
 .loading {
+  font-family: 'Amarante';
   text-align: center;
   padding: 3rem;
   color: #ffffff;
@@ -24,54 +25,55 @@
   max-width: 600px;
 }
 
-.collection-item-container {
+.collectionItemContainer {
+  font-family: 'Amarante';
   background: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.collection-item-container:hover {
+.collectionItemContainer:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
-.item-image-container {
+.itemImageContainer {
   height: 300px;
   overflow: hidden;
   position: relative;
 }
 
-.item-image {
+.itemImage {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
 
-.collection-item-container:hover .item-image {
+.collectionItemContainer:hover .itemImage {
   transform: scale(1.05);
 }
 
-.item-content {
+.itemContent {
   padding: 1.5rem;
   background: rgba(255, 255, 255, 0.05);
 }
 
-.item-title {
+.itemTitle {
   color: #ffffff;
   font-size: 1.6rem;
   margin-bottom: 0.8rem;
   font-weight: 600;
 }
 
-.related-section {
+.relatedSection {
   margin-top: 1.5rem;
   padding-top: 1.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.related-header {
+.relatedHeader {
   color: #ffffff;
   font-size: 1.2rem;
   margin-bottom: 0.8rem;
@@ -79,13 +81,13 @@
   opacity: 0.9;
 }
 
-.related-content {
+.relatedContent {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
 
-.related-item {
+.relatedItem {
   color: #ffffff;
   font-size: 1rem;
   background: rgba(255, 255, 255, 0.1);
@@ -95,7 +97,7 @@
   opacity: 0.9;
 }
 
-.related-item:hover {
+.relatedItem:hover {
   background: rgba(255, 255, 255, 0.2);
   opacity: 1;
 }

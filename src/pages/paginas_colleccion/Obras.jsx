@@ -122,7 +122,7 @@ const ObraItem = ({ obra, allActors, allAuthors }) => {
 
         {/* Sección de Actores Adicionales */}
         {actoresAdicionalesTexto.length > 0 && (
-          <div className={styles.relatedSection}>
+          <div className={`pb-3 ${styles.relatedSection}`}>
             <div className={styles.relatedHeader}>Otros Actores</div>
             <div className={styles.relatedContent}>
               <div className={styles.relatedItem}>{actoresAdicionalesTexto}</div>
@@ -193,7 +193,7 @@ const Obras = () => {
       <div className='museum-background'>
         <div className={styles.obrasContainer}>
           <div className="pb-5" style={{ paddingTop: "12rem" }}>
-            <div className="text-center text-white">
+            <div className={`${styles.loading}`}>
               <h3>Cargando obras y datos relacionados...</h3>
             </div>
           </div>
@@ -219,10 +219,11 @@ const Obras = () => {
 
   return (
     <div className='museum-background'>
+      <div className="container-fluid subtitle-font position-absolute" style={{marginTop: '100px', textAlign: 'center'}}>
+        Obras
+      </div>
       <div className={styles.obrasContainer}>
         <div className="pb-5" style={{ paddingTop: "12rem" }}>
-          {/* ... (Tu lógica de carga y error ya existente) */}
-
           {!loading && !error && obras.length === 0 && (
             <div className="text-center text-white">
               <h3>No hay obras disponibles</h3>

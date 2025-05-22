@@ -1,7 +1,7 @@
 import React from 'react'
 import { getAutores } from '../../Components/utils/ApiFun.js'
 import { useEffect, useState } from 'react'
-import './Autores.module.css'
+import styles from './Autores.module.css'
 
 const AutorItem = ({ autor }) => {
   // Verificar si autor existe
@@ -23,22 +23,22 @@ const AutorItem = ({ autor }) => {
   const obras = autor.obras || []
 
   return (
-    <div className='container collection-item-container w-75'>
+    <div className={`container ${styles.collectionItemContainer} w-75 my-5`}>
       <div className='container'>
         <div className='row'>
-          <div className="col-8 pe-0 item-image-container">
-            <img src={imagen} alt={nombre} className='item-image'/>
+          <div className={`col-8 pe-0 ${styles.itemImageContainer}`}>
+            <img src={imagen} alt={nombre} className={`${styles.itemImage}`}/>
           </div>
-          <div className="col-4 item-content">
-            <h2 className="item-title">{nombre}</h2>
-            <h3 className='item-title'>{reseña}</h3>
+          <div className={`col-4 ${styles.itemContent}`}>
+            <h2 className={`${styles.itemTitle}`}>{nombre}</h2>
+            <h3 className={`${styles.itemTitle}`}>{reseña}</h3>
           </div>
         </div>
         
         {Array.isArray(obras) && (
-          <div className='related-section'>
-            <div className="related-header">Obras</div>
-            <div className="related-content">
+          <div className={`pb-3 ${styles.relatedSection}`}>
+            <div className={`${styles.relatedHeader}`}>Obras</div>
+            <div className={`${styles.relatedContent}`}>
               {obras.length > 0 ? (
                 obras.map((obra, index) => {
                   // Manejar diferentes formatos de datos de obra
@@ -53,11 +53,11 @@ const AutorItem = ({ autor }) => {
                   }
                   
                   return (
-                    <div key={`obra-${index}`} className='related-item'>{tituloObra}</div>
+                    <div key={`obra-${index}`} className={`${styles.relatedItem}`}>{tituloObra}</div>
                   );
                 })
               ) : (
-                <div className='related-item'>No hay obras disponibles</div>
+                <div className={`${styles.relatedItem}`}>No hay obras disponibles</div>
               )}
             </div>
           </div>
@@ -99,7 +99,7 @@ const Autores = () => {
     return (
       <div className='museum-background'>
         <div className="pb-5" style={{paddingTop: "12rem"}}>
-          <div className="text-center text-white">
+          <div className={styles.loading}>
             <h3>Cargando autores...</h3>
           </div>
         </div>
@@ -111,7 +111,7 @@ const Autores = () => {
     return (
       <div className='museum-background'>
         <div className="pb-5" style={{paddingTop: "12rem"}}>
-          <div className="text-center text-white">
+          <div className={styles.error}>
             <h3>Error: {error}</h3>
             <p>Por favor, intenta nuevamente más tarde.</p>
           </div>
@@ -122,13 +122,16 @@ const Autores = () => {
 
   return (
     <div className='museum-background'>
+      <div className="container-fluid subtitle-font position-absolute" style={{marginTop: '100px', textAlign: 'center'}}>
+        Autores
+      </div>
       <div className="pb-5" style={{paddingTop: "12rem"}}>
         {autores.length > 0 ? (
           autores.map((autor, index) => (
             <AutorItem key={autor.id || `autor-${index}`} autor={autor} />
           ))
         ) : (
-          <div className="text-center text-white">
+          <div className={styles.loading}>
             <h3>No hay autores disponibles</h3>
           </div>
         )}

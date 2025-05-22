@@ -8,7 +8,7 @@ const TitereItem = ({ titere }) => {
   // Verificar si titere existe
   if (!titere) {
     return (
-      <div className={`container ${styles.collectionItemContainer} w-75`}>
+      <div className={`container ${styles.collectionItemContainer} w-75 my-5`}>
         <div className='text-center p-5'>
           <h3>No hay datos disponibles</h3>
         </div>
@@ -23,7 +23,7 @@ const TitereItem = ({ titere }) => {
   const obras = titere.obras || []
 
   return (
-    <div className={`container ${styles.collectionItemContainer} w-75`}>
+    <div className={`container ${styles.collectionItemContainer} w-75 my-5`}>
       <div className='container'>
         <div className='row'>
           <div className={`col-8 pe-0 ${styles.itemImageContainer}`}>
@@ -36,7 +36,7 @@ const TitereItem = ({ titere }) => {
         </div>
         
         {Array.isArray(obras) && (
-          <div className={styles.relatedSection}>
+          <div className={`pb-3 ${styles.relatedSection}`}>
             <div className={styles.relatedHeader}>Obras</div>
             <div className={styles.relatedContent}>
               {obras.length > 0 ? (
@@ -99,8 +99,8 @@ const Titeres = () => {
     return (
       <div className='museum-background'>
         <div className="pb-5" style={{paddingTop: "12rem"}}>
-          <div className="text-center text-white">
-            <h3>Cargando títeres...</h3>
+          <div className={styles.loading}>
+            <h3>Cargando Títeres...</h3>
           </div>
         </div>
       </div>
@@ -111,7 +111,7 @@ const Titeres = () => {
     return (
       <div className='museum-background'>
         <div className="pb-5" style={{paddingTop: "12rem"}}>
-          <div className="text-center text-white">
+          <div className={styles.error}>
             <h3>Error: {error}</h3>
             <p>Por favor, intenta nuevamente más tarde.</p>
           </div>
@@ -122,6 +122,9 @@ const Titeres = () => {
 
   return (
     <div className='museum-background'>
+      <div className="container-fluid subtitle-font position-absolute" style={{marginTop: '100px', textAlign: 'center'}}>
+        Títeres
+      </div>
       <div className={styles.titeresContainer}>
         <div className="pb-5" style={{paddingTop: "12rem"}}>
           {loading && (
@@ -138,7 +141,7 @@ const Titeres = () => {
           )}
 
           {!loading && !error && titeres.length === 0 && (
-            <div className="text-center text-white">
+            <div className={styles.loading}>
               <h3>No hay títeres disponibles</h3>
             </div>
           )}
