@@ -25,13 +25,13 @@ const AutorItem = ({ autor }) => {
   return (
     <div className={`container ${styles.collectionItemContainer} w-75 my-5`}>
       <div className='container'>
-        <div className='row'>
-          <div className={`col-md-8 px-0 ${styles.itemImageContainer}`}>
+        <div className='row pt-3'>
+          <div className={`col-md-8 px-0 d-flex ${styles.itemImageContainer}`}>
             <img src={imagen} alt={nombre} className={`${styles.itemImage}`}/>
           </div>
-          <div className={`col-md-4 ${styles.itemContent}`}>
-            <h2 className={`${styles.itemTitle}`}>{nombre}</h2>
-            <h3 className={`${styles.itemDescription}`}>{reseña}</h3>
+          <div className={`col-md-4 d-flex flex-column ${styles.itemContent}`}>
+            <h2 className={`ps-2 mb-0 ${styles.itemTitle}`}>{nombre}</h2>
+            <h3 className={`p-1 pb-0 mb-0 ${styles.itemDescription}`}>{reseña}</h3>
           </div>
         </div>
         

@@ -24,7 +24,7 @@ const TitereItem = ({ actor }) => {
   return (
     <div className={`container ${styles.collectionItemContainer} w-75 my-5`}>
       <div className='container'>
-        <div className='row'>
+        <div className='row pt-3'>
           <div className={`col-md-8 px-0 ${styles.itemImageContainer}`}>
             <img src={imagen} alt={nombre} className={`${styles.itemImage}`}/>
           </div>

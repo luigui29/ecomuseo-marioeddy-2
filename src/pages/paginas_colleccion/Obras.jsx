@@ -78,7 +78,7 @@ const ObraItem = ({ obra, allActors, allAuthors }) => {
   return (
     <div className={`container ${styles.collectionItemContainer} ${styles.w75}`}>
       <div className='container'>
-        <div className='row'>
+        <div className='row pt-3'>
           <div className={`col-md-8 px-0 ${styles.itemImageContainer}`}>
             <img src={imagen} alt={titulo} className={`item-image ${styles.itemImage}`} />
           </div>
