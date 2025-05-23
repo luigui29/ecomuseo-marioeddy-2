@@ -1,5 +1,5 @@
 import React from 'react'
-import { getAutores } from '../../Components/utils/ApiFun.js'
+import { getAutores , getObras } from '../../Components/utils/ApiFun.js'
 import { useEffect, useState } from 'react'
 import styles from './Autores.module.css'
 
