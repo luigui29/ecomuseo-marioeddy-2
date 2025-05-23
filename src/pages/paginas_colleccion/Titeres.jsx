@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { getTiteres } from '../../Components/utils/ApiFun.js'; // Asegúrate de tener getActors en ApiFun.js
 import TitereItem from '../paginas_colleccion/TiteraItem.jsx'; // Asegúrate de la ruta correcta
-
+import styles from './Titeres.module.css'
 
 const Titeres = () => {
   const [actores, setActores] = useState([]);
@@ -38,7 +38,7 @@ const Titeres = () => {
     return (
       <div className='museum-background'>
         <div className="pb-5" style={{paddingTop: "12rem"}}>
-          <div className='text-center text-white'>
+          <div className={`${styles.loading}`}>
             <h3>Cargando actores...</h3>
           </div>
         </div>
@@ -50,7 +50,7 @@ const Titeres = () => {
     return (
       <div className='museum-background'>
         <div className="pb-5" style={{paddingTop: "12rem"}}>
-          <div className='text-center text-white'>
+          <div className={`${styles.error}`}>
             <h3>Error: {error}</h3>
             <p>Por favor, intenta nuevamente más tarde.</p>
           </div>
@@ -71,7 +71,7 @@ const Titeres = () => {
             <TitereItem key={actor.idactor || `actor-${index}`} actor={actor} />
           ))
         ) : (
-          <div className='text-center text-white'>
+          <div className={`${styles.loading}`}>
             <h3>No hay actores disponibles.</h3>
           </div>
         )}

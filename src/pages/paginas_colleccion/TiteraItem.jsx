@@ -25,12 +25,11 @@ const TitereItem = ({ actor }) => {
     <div className={`container ${styles.collectionItemContainer} w-75 my-5`}>
       <div className='container'>
         <div className='row'>
-          <div className={`col-8 pe-0 ${styles.itemImageContainer}`}>
+          <div className={`col-md-8 px-0 ${styles.itemImageContainer}`}>
             <img src={imagen} alt={nombre} className={`${styles.itemImage}`}/>
           </div>
-          <div className={`col-4 ${styles.itemContent}`}>
+          <div className={`col-md-4 ${styles.itemContent}`}>
             <h2 className={`${styles.itemTitle}`}>{nombre}</h2>
-            {/* Usar <p> para las características para mejor semántica */}
             <p className={`${styles.itemDescription}`}>{caracteristicas}</p>
           </div>
         </div>

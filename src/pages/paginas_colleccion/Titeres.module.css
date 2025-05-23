@@ -56,15 +56,24 @@
 }
 
 .itemContent {
-  padding: 1.5rem;
+  padding: 1rem;
   background: rgba(255, 255, 255, 0.05);
 }
 
 .itemTitle {
+  font-family: 'Amarante';
   color: #ffffff;
   font-size: 1.6rem;
   margin-bottom: 0.8rem;
   font-weight: 600;
+}
+
+.itemDescription {
+  color: #000000;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
 }
 
 .relatedSection {
@@ -100,4 +109,12 @@
 .relatedItem:hover {
   background: rgba(255, 255, 255, 0.2);
   opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .itemImage {
+    padding-top: 16px;
+    object-fit: contain;
+    aspect-ratio: 16 / 9;
+  }
 }

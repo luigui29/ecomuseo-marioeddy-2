@@ -79,12 +79,12 @@ const ObraItem = ({ obra, allActors, allAuthors }) => {
     <div className={`container ${styles.collectionItemContainer} ${styles.w75}`}>
       <div className='container'>
         <div className='row'>
-          <div className={`col-8 pe-0 ${styles.itemImageContainer}`}>
+          <div className={`col-md-8 px-0 ${styles.itemImageContainer}`}>
             <img src={imagen} alt={titulo} className={`item-image ${styles.itemImage}`} />
           </div>
-          <div className={`col-4 ${styles.itemContent}`}>
-            <h2 className={`item-title ${styles.itemTitle}`}>{titulo}</h2>
-            <div className={`item-description ${styles.itemDescription}`}>
+          <div className={`col-md-4 ${styles.itemContent}`}>
+            <h2 className={`${styles.itemTitle}`}>{titulo}</h2>
+            <div className={`${styles.itemDescription}`}>
               {descripcionTexto}
             </div>
           </div>
