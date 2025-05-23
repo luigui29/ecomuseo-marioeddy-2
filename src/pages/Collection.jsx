@@ -20,14 +20,14 @@ const Collection = () => {
             <img src={cortinas} alt="cortinas" className='position-absolute w-100 mt-5'/>
             <div className='position-absolute collection-header'>
               <h2 className='subtitle-font collection-title'>Colección</h2>
-              <div className="row position-absolute collection-links">
+              <div className="row position-absolute collection-links" style={{zIndex : 2}}>
                 <div className='col-4 text-center caption-font'><a className='c-link' href="/autores">Autores</a></div>
                 <div className='col-4 text-center caption-font'><a className='c-link' href="/obras">Obras</a></div>
                 <div className='col-4 text-center caption-font'><a className='c-link' href="/titeres">Títeres</a></div>
               </div>   
             </div>
             { /* Decoración */ }
-            <div className="position-relative" id="collection-decoration-div">
+            <div className="position-relative" id="collection-decoration-div" style={{zIndex : 1}}>
               <div className="row position-relative" style={{minHeight: '53vh'}}>
                 <img src={mario} alt="mario" className='collection-decoration' id='collection-mario' />
                 <img src={titere_1} alt="titere" className='collection-decoration' id='collection-titere-1'/>
