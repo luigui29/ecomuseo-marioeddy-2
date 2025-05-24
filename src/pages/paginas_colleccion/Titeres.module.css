@@ -16,6 +16,7 @@
 }
 
 .error {
+  font-family: 'Amarante';
   text-align: center;
   padding: 2rem;
   color: #dc3545;
@@ -31,6 +32,7 @@
   border-radius: 20px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: rgba(45, 36, 12, 0.8);
 }
 
 .collectionItemContainer:hover {
@@ -58,23 +60,25 @@
 
 .itemContent {
   padding: 1rem;
+  padding: 0;
   background: rgba(255, 255, 255, 0.05);
 }
 
 .itemTitle {
   font-family: 'Amarante';
   color: #ffffff;
-  font-size: 1.6rem;
-  margin-bottom: 0.8rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
   font-weight: 600;
+  background-color: rgba(203, 161, 53, 0.4);
 }
 
 .itemDescription {
   color: #000000;
   font-size: 1.1rem;
   line-height: 1.6;
-  margin-bottom: 1.5rem;
-  opacity: 0.9;
+  flex-grow: 1;
+  overflow-y: scroll;
 }
 
 .relatedSection {

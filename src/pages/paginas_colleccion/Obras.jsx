@@ -2,6 +2,7 @@ import React from 'react';
 import { getObras, getTiteres, getAutores } from '../../Components/utils/ApiFun.js'; 
 import { useEffect, useState } from 'react';
 import styles from './Obras.module.css';
+import decoracion from '../../assets/anillo_dorado_1.png'
 
 
 const ObraItem = ({ obra, allActors, allAuthors }) => {
@@ -76,15 +77,16 @@ const ObraItem = ({ obra, allActors, allAuthors }) => {
   }
 
   return (
-    <div className={`container ${styles.collectionItemContainer} ${styles.w75}`}>
+    <div className={`container ${styles.collectionItemContainer} w-75 my-5`}>
       <div className='container'>
         <div className='row pt-3'>
-          <div className={`col-md-8 px-0 ${styles.itemImageContainer}`}>
-            <img src={imagen} alt={titulo} className={`item-image ${styles.itemImage}`} />
+          <div className={`col-md-8 px-0 d-flex position-relative ${styles.itemImageContainer}`}>
+            <img src={decoracion} alt="decoracion" className={`position-absolute ${styles.decoracionImage}`} />
+            <img src={imagen} alt={titulo} className={`position-absolute ${styles.itemImage}`} />
           </div>
-          <div className={`col-md-4 ${styles.itemContent}`}>
-            <h2 className={`${styles.itemTitle}`}>{titulo}</h2>
-            <div className={`${styles.itemDescription}`}>
+          <div className={`col-md-4 d-flex flex-column ${styles.itemContent}`}>
+            <h2 className={`ps-2 mb-0 ${styles.itemTitle}`}>{titulo}</h2>
+            <div className={`p-1 pb-0 mb-0 ${styles.itemDescription}`}>
               {descripcionTexto}
             </div>
           </div>
@@ -207,7 +209,7 @@ const Obras = () => {
       <div className='museum-background'>
         <div className={styles.obrasContainer}>
           <div className="pb-5" style={{ paddingTop: "12rem" }}>
-            <div className="text-center text-white">
+            <div className={`${styles.error}`}>
               <h3>Error: {error}</h3>
               <p>Por favor, intenta nuevamente más tarde.</p>
             </div>
@@ -225,7 +227,7 @@ const Obras = () => {
       <div className={styles.obrasContainer}>
         <div className="pb-5" style={{ paddingTop: "12rem" }}>
           {!loading && !error && obras.length === 0 && (
-            <div className="text-center text-white">
+            <div className={`${styles.loading}`}>
               <h3>No hay obras disponibles</h3>
             </div>
           )}

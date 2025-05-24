@@ -2,6 +2,7 @@ import React from 'react'
 import { getAutores , getObras } from '../../Components/utils/ApiFun.js'
 import { useEffect, useState } from 'react'
 import styles from './Autores.module.css'
+import decoracion from '../../assets/anillo_dorado_1.png'
 
 const AutorItem = ({ autor }) => {
   // Verificar si autor existe
@@ -26,8 +27,9 @@ const AutorItem = ({ autor }) => {
     <div className={`container ${styles.collectionItemContainer} w-75 my-5`}>
       <div className='container'>
         <div className='row pt-3'>
-          <div className={`col-md-8 px-0 d-flex ${styles.itemImageContainer}`}>
-            <img src={imagen} alt={nombre} className={`${styles.itemImage}`}/>
+          <div className={`col-md-8 px-0 d-flex position-relative ${styles.itemImageContainer}`}>
+            <img src={decoracion} alt="decoracion" className={`position-absolute ${styles.decoracionImage}`}/>
+            <img src={imagen} alt={nombre} className={`position-absolute ${styles.itemImage}`}/>
           </div>
           <div className={`col-md-4 d-flex flex-column ${styles.itemContent}`}>
             <h2 className={`ps-2 mb-0 ${styles.itemTitle}`}>{nombre}</h2>

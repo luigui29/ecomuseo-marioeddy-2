@@ -1,7 +1,6 @@
-// src/Components/Actores/ActorItem.js
-
 import React from 'react';
 import styles from './Titeres.module.css'; // Asumiendo que tienes un archivo CSS para Actores
+import decoracion from '../../assets/anillo_dorado_1.png'
 
 const TitereItem = ({ actor }) => {
   if (!actor) {
@@ -28,9 +27,9 @@ const TitereItem = ({ actor }) => {
           <div className={`col-md-8 px-0 ${styles.itemImageContainer}`}>
             <img src={imagen} alt={nombre} className={`${styles.itemImage}`}/>
           </div>
-          <div className={`col-md-4 ${styles.itemContent}`}>
-            <h2 className={`${styles.itemTitle}`}>{nombre}</h2>
-            <p className={`${styles.itemDescription}`}>{caracteristicas}</p>
+          <div className={`col-md-4 d-flex flex-column ${styles.itemContent}`}>
+            <h2 className={`ps-2 mb-0 ${styles.itemTitle}`}>{nombre}</h2>
+            <p className={`p-1 pb-0 mb-0 ${styles.itemDescription}`}>{caracteristicas}</p>
           </div>
         </div>
         

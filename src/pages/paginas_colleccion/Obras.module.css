@@ -32,6 +32,7 @@
   border-radius: 20px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: rgba(45, 36, 12, 0.8);
 }
 
 .collectionItemContainer:hover {
@@ -47,10 +48,15 @@
 }
 
 .itemImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 40%;
   transition: transform 0.3s ease;
+  border-radius: 100%;
+  z-index: 2;
+}
+
+.decoracionImage {
+  width: 40%;
+  z-index: 3;
 }
 
 .collectionItemContainer:hover .itemImage {
@@ -59,15 +65,17 @@
 
 .itemContent {
   padding: 1rem;
+  padding: 0;
   background: rgba(255, 255, 255, 0.05);
 }
 
 .itemTitle {
   font-family: 'Amarante';
   color: #ffffff;
-  font-size: 1.8rem;
-  margin-bottom: 0.8rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
   font-weight: 600;
+  background-color: rgba(203, 161, 53, 0.4);
 }
 
 .itemYear {
@@ -81,8 +89,8 @@
   color: #000000;
   font-size: 1.1rem;
   line-height: 1.6;
-  margin-bottom: 1.5rem;
-  opacity: 0.9;
+  flex-grow: 1;
+  overflow-y: scroll;
 }
 
 .relatedSection {
@@ -120,9 +128,16 @@
   opacity: 1;
 }
 
-@media (max-width: 768px) {
-  .itemImage {
-    object-fit: contain;
-    aspect-ratio: 1 / 1;
+@media (max-width: 992px) {
+  .itemImage,
+  .decoracionImage {
+    width: 60%;
+  }
+}
+
+@media (max-width: 576px) {
+  .itemImage,
+  .decoracionImage {
+    width: 80%;
   }
 }
