@@ -159,7 +159,7 @@ const Obras = () => {
         } else {
           console.error('Los datos de obras no tienen el formato esperado:', obrasResponse);
           setObras([]);
-          setError('Los datos de obras recibidos no tienen el formato esperado');
+          setError('Los datos de obras recibidos no tienen el formato esperado o la API falló.');
         }
 
         // Cargar Todos los Actores

@@ -85,7 +85,7 @@ const Autores = () => {
         } else {
           console.error('Los datos de autores no tienen el formato esperado:', response)
           setAutores([])
-          setError('Los datos recibidos no tienen el formato esperado')
+          setError('Los datos recibidos no tienen el formato esperado o la API falló.')
         }
       } catch (err) {
         console.error('Error al cargar autores:', err)
