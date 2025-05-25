@@ -20,13 +20,13 @@ const Titeres = () => {
           setActores(response.data);
           console.log(response.data)
         } else {
-          console.error('Los datos de actores no tienen el formato esperado:', response);
+          console.error('Los datos de títeres no tienen el formato esperado:', response);
           setActores([]);
           setError('Los datos recibidos no tienen el formato esperado o la API falló.');
         }
       } catch (err) {
-        console.error('Error al cargar actores:', err);
-        setError('Error al cargar los datos de actores. Por favor, intenta nuevamente más tarde.');
+        console.error('Error al cargar títeres:', err);
+        setError('Error al cargar los datos de títeres. Por favor, intenta nuevamente más tarde.');
       } finally {
         setLoading(false);
       }
@@ -39,7 +39,7 @@ const Titeres = () => {
       <div className='museum-background'>
         <div className="pb-5" style={{paddingTop: "12rem"}}>
           <div className={`${styles.loading}`}>
-            <h3>Cargando actores...</h3>
+            <h3>Cargando titeres...</h3>
           </div>
         </div>
       </div>
@@ -62,7 +62,7 @@ const Titeres = () => {
   return (
     <div className='museum-background'>
       <div className="container-fluid subtitle-font position-absolute" style={{marginTop: '100px', textAlign: 'center'}}>
-        Actores
+        Títeres
       </div>
       <div className="pb-5" style={{paddingTop: "12rem"}}>
         {actores.length > 0 ? (
@@ -72,7 +72,7 @@ const Titeres = () => {
           ))
         ) : (
           <div className={`${styles.loading}`}>
-            <h3>No hay actores disponibles.</h3>
+            <h3>No hay títeres disponibles.</h3>
           </div>
         )}
       </div>

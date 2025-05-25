@@ -20,12 +20,27 @@
   flex-direction: column;
 }
 
+.museum-background-2 {
+  background: var(--gcolor-6);
+  min-height: 100dvh;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
 .taller-background {
   background: linear-gradient(to right, var(--bcolor-1), var(--bcolor-2));
   min-height: 100dvh;
   min-height: 100vh;
   flex-wrap: wrap;
 }
+
+.gold-card { 
+  background: linear-gradient(to right, var(--gcolor-1), var(--gcolor-2)); 
+  border-radius: 10px;
+}
+.gold-card-body { font-family: 'Amarante'; }
 
 /* General Fonts */
 .subtitle-font {
@@ -35,7 +50,10 @@
   text-shadow: 1px 0 10px black; 
 }
 
-.caption-font { font-family: 'Amarante'; }
+.caption-font { 
+  font-family: 'Amarante';
+  color: white;
+}
 
 .taller-caption {
   font-family: 'Amarante';

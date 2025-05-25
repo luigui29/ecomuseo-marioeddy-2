@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Titeres.module.css'; // Asumiendo que tienes un archivo CSS para Actores
+import styles from './Titeres.module.css';
 import decoracion from '../../assets/anillo_dorado_1.png'
 
 const TitereItem = ({ actor }) => {
@@ -13,9 +13,9 @@ const TitereItem = ({ actor }) => {
     );
   }
   
-  const imagen = actor.imagen || 'https://picsum.photos/600/400?random=2'; // Diferente random para actores
+  const imagen = actor.imagen || 'https://picsum.photos/600/400?random=2'; 
   const nombre = actor.descripcion || 'Actor sin nombre';
-  const caracteristicas = actor.caracteristicas || 'Sin características.'; // Usas 'caracteristicas' para actores
+  const caracteristicas = actor.caracteristicas || 'Sin características.'; 
   
   // Las obras ya vienen anidadas y formateadas desde el backend (gracias al modelo Actor.js)
   const obras = actor.obras || [];
@@ -36,7 +36,7 @@ const TitereItem = ({ actor }) => {
         
         {Array.isArray(obras) && (
           <div className={`pb-3 ${styles.relatedSection}`}>
-            <div className={`${styles.relatedHeader}`}>Obras en las que participa</div> {/* Texto más descriptivo */}
+            <div className={`${styles.relatedHeader}`}>Obras en las que participa</div>
             <div className={`${styles.relatedContent}`}>
               {obras.length > 0 ? (
                 obras.map((obra, index) => {
@@ -47,7 +47,7 @@ const TitereItem = ({ actor }) => {
                   );
                 })
               ) : (
-                <div className={`${styles.relatedItem}`}>No hay obras asociadas a este actor.</div>
+                <div className={`${styles.relatedItem}`}>No hay obras asociadas a este títere.</div>
               )}
             </div>
           </div>
