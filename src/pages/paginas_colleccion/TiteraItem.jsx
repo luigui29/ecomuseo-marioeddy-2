@@ -12,7 +12,7 @@ const TitereItem = ({ actor }) => {
       </div>
     );
   }
-
+  
   const imagen = actor.imagen || 'https://picsum.photos/600/400?random=2'; // Diferente random para actores
   const nombre = actor.descripcion || 'Actor sin nombre';
   const caracteristicas = actor.caracteristicas || 'Sin características.'; // Usas 'caracteristicas' para actores
@@ -24,8 +24,9 @@ const TitereItem = ({ actor }) => {
     <div className={`container ${styles.collectionItemContainer} w-75 my-5`}>
       <div className='container'>
         <div className='row pt-3'>
-          <div className={`col-md-8 px-0 ${styles.itemImageContainer}`}>
-            <img src={imagen} alt={nombre} className={`${styles.itemImage}`}/>
+          <div className={`col-md-8 px-0 position-relative d-flex ${styles.itemImageContainer}`}>
+            <img src={decoracion} alt="decoracion" className={`position-absolute ${styles.decoracionImage}`} />
+            <img src={imagen} alt={nombre} className={`position-absolute ${styles.itemImage}`}/>
           </div>
           <div className={`col-md-4 d-flex flex-column ${styles.itemContent}`}>
             <h2 className={`ps-2 mb-0 ${styles.itemTitle}`}>{nombre}</h2>

@@ -1,12 +1,3 @@
-.authorsContainer {
-  padding: 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
 .collectionItemContainer {
   font-family: 'Amarante';
   background: rgba(255, 255, 255, 0.1);
@@ -30,16 +21,16 @@
   justify-content: center;
 }
 
-.decoracionImage {
-  width: 40%;
-  z-index: 3;
-}
-
 .itemImage {
   width: 40%;
   transition: transform 0.3s ease;
   border-radius: 100%;
   z-index: 2;
+}
+
+.decoracionImage {
+  width: 40%;
+  z-index: 3;
 }
 
 .collectionItemContainer:hover .itemImage {

@@ -193,7 +193,7 @@ const Obras = () => {
   if (loading) {
     return (
       <div className='museum-background'>
-        <div className={styles.obrasContainer}>
+        <div className={`container-fluid`}>
           <div className="pb-5" style={{ paddingTop: "12rem" }}>
             <div className={`${styles.loading}`}>
               <h3>Cargando obras y datos relacionados...</h3>
@@ -207,7 +207,7 @@ const Obras = () => {
   if (error) {
     return (
       <div className='museum-background'>
-        <div className={styles.obrasContainer}>
+        <div className={`container-fluid`}>
           <div className="pb-5" style={{ paddingTop: "12rem" }}>
             <div className={`${styles.error}`}>
               <h3>Error: {error}</h3>
@@ -224,7 +224,7 @@ const Obras = () => {
       <div className="container-fluid subtitle-font position-absolute" style={{marginTop: '100px', textAlign: 'center'}}>
         Obras
       </div>
-      <div className={styles.obrasContainer}>
+      <div className={`container-fluid`}>
         <div className="pb-5" style={{ paddingTop: "12rem" }}>
           {!loading && !error && obras.length === 0 && (
             <div className={`${styles.loading}`}>
