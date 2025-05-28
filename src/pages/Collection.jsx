@@ -19,7 +19,7 @@ const Collection = () => {
           <div className='position-relative collection-page-div'>
             <img src={cortinas} alt="cortinas" className='position-absolute w-100 mt-5'/>
             <div className='position-absolute collection-header'>
-              <h2 className='subtitle-font collection-title'>Colección</h2>
+              <h2 className='subtitle-font collection-title'>Coleccion</h2>
               <div className="row position-absolute collection-links" style={{zIndex : 2}}>
                 <div className='col-4 text-center caption-font'><a className='c-link' href="/autores">Autores</a></div>
                 <div className='col-4 text-center caption-font'><a className='c-link' href="/obras">Obras</a></div>
