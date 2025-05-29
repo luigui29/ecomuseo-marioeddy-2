@@ -43,16 +43,16 @@ const HomePage = () => {
           </div>
           <div className="container">
             <div className="row nuestro-museo-desc caption-font position-relative">
-              Fundado en 2024, Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Lorem Ipsum.
+              Nace el 21 de Marzo de 2024 (Día Mundial del Títere), su nombre es una fusión en homenaje a dos legendarios del teatro del guiñol. Su fundador y director es el licenciado y titiritero Mario R. Pereira, quien es creador también del teatro de titeres especie (1987) y del festival escolar de títeres alegría (1985). Actualmente contamos con el apoyo de la Secretaria Cultural de la Gobernación del Estado Bolívar, con la asignación a tiempo completo de dos activadoras culturales, y que son a la vez guías recreadoras para atender con eficacia y eficiencia al público asistente.
             </div>
             <div className="row">
               <div className="col-6 d-flex flex-column">
                 <div className='subtitle-font' style={{margin: '0 auto'}}> Visión </div>
-                <div className='misvis-desc'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum sed iste magnam eligendi totam, deserunt distinctio mollitia minima error accusantium rerum reiciendis doloremque iure, voluptas aliquid provident, eaque explicabo itaque.</div>
+                <div className='misvis-desc'> Ser un referente cultural en la promocion del arte de los titeres, conectando tradicion e innovacion para inspirar a diferentes generaciones. </div>
               </div>
               <div className="col-6 d-flex flex-column">
                 <div className='subtitle-font' style={{margin: '0 auto'}}> Misión </div>
-                <div className='misvis-desc'> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi ex animi repudiandae fugiat odio ullam molestias enim, earum fugit beatae est! Aliquid voluptas labore cupiditate aliquam a expedita amet eligendi. </div>
+                <div className='misvis-desc'> Educar, entretener y preservar el patrimonio de los títeres mediante diversas experiencias interactivas, accesibles a diferentes edades. </div>
               </div>
             </div>
           </div>
