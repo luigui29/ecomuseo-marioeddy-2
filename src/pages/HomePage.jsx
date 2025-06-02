@@ -99,14 +99,14 @@ const HomePage = () => {
         </div>
 
         {/* Sección Ubicación */}
-        <div className='ubicacion-div'>
+        <div className='ubicacion-div' id="#ubicacion">
             <div className="container ubicacion-container mx-0 h-auto mw-100">
               <CardMap />
             </div>
         </div>
       </main>
       
-     <Footer/>
+      <Footer/>
     </div>
   )
 }

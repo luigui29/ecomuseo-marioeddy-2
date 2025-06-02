@@ -23,7 +23,9 @@ const Hero = () => {
             <div className="hero-content animate__animated animate__fadeIn">
               <h2 className="hero-title">Ecomuseo de Títeres Marioeddy</h2>
               <p className="hero-subtitle">Para ser Titiritero vivirás la historia de un viajero...</p>
-              <button className="hero-button">Conoce más</button>
+              <a href="#ubicacion">
+                <button className="hero-button">Conoce más</button>
+              </a>
             </div>
           </div>
           
@@ -35,7 +37,9 @@ const Hero = () => {
             <div className="hero-content animate__animated animate__fadeIn">
               <h2 className="hero-title">Nuestra Colección</h2>
               <p className="hero-subtitle">Descubre títeres tradicionales de Venezuela y Latinoamérica</p>
-              <button className="hero-button">Conoce más</button>
+              <a href="/collection">
+                <button className="hero-button">Conoce más</button>
+              </a>
             </div>
           </div>
           
@@ -47,7 +51,9 @@ const Hero = () => {
             <div className="hero-content animate__animated animate__fadeIn">
               <h2 className="hero-title">Talleres Educativos</h2>
               <p className="hero-subtitle">Aprende sobre el arte en el mundo con nuestros maestros</p>
-              <button className="hero-button">Conoce más</button>
+              <a href="/talleres">´
+                <button className="hero-button">Conoce más</button>
+              </a>
             </div>
           </div>
         </div>
