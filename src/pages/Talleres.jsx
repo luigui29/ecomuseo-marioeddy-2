@@ -10,7 +10,7 @@ const Talleres = () => {
   return (
     <div className='taller-background'>
       {/* Titulo y Descripcion */}
-      <div className="container-fluid my-5" style={{paddingTop: '100px'}}>
+      <div className="container my-5 mx-auto" style={{paddingTop: '100px'}}>
         <div className="container-fluid">
           <div className="row">
             <h1 className="subtitle-font-kids">Nuestros Talleres</h1>
