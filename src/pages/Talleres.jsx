@@ -8,57 +8,76 @@ import flores_izquierda from '../assets/decoraciones/flower-side-left.png'
 
 const Talleres = () => {
   return (
-    <div className='taller-background d-flex flex-column'>
-      {/* Titulo */}
-      <div className="container" style={{paddingTop: '100px'}}>
-        <div className="row">
-          <h1 className="subtitle-font-kids">Nuestros Talleres</h1>
+    <div className='taller-background'>
+      {/* Titulo y Descripcion */}
+      <div className="container-fluid my-5" style={{paddingTop: '100px'}}>
+        <div className="container-fluid">
+          <div className="row">
+            <h1 className="subtitle-font-kids">Nuestros Talleres</h1>
+          </div>
+          <div className="row taller-desc">
+            El Ecomuseo Marioeddy ofrece varios talleres recreativos donde los jovenes pueden nutrirse y vivir el arte del teatro de titeres. A continuación se muestran los talleres disponibles actualmente y un formulario donde puede inscribirse a los talleres.
+          </div>
         </div>
       </div>
 
-      {/* Descripcion */}
-      <div className="container taller-container" style={{paddingTop: '50px'}}>
-        <div className="row">
-          <div className="col-12 taller-caption">Brigada Ecológica Protectores del Verde Azul</div>
-        </div>
-        <div className="row">
-          <div className="col-12 taller-desc"><b>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</b></div>
-        </div>
-      </div>
-
-      {/* Taller */}
-      <div className='container taller-container-pc position-relative' style={{marginTop: '100px', marginBottom: '100px'}}>
-
-        <div inert={'true'}>
-          <img className='position-absolute taller-decoracion' id='taller-decoracion-d' src={flores_derecha} alt="flores" />
-        </div>
-
-        <div inert={'true'}>
-          <img className='position-absolute taller-decoracion' id='taller-decoracion-i' src={flores_izquierda} alt="flores" />
-        </div>
-
-        <div className="row taller-row-pc">
-          <div className='col-6 pe-0'>
-            <div className='taller-div h-100'>
-              <iframe style={{minHeight: '100%', width: '100%'}} src="https://docs.google.com/forms/d/e/1FAIpQLScd7-vm54f7iegNZU5jypWoQejxwE_09EQ48WtSeOHYL_hh-g/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+      {/* Indicadores de Disponibilidad */}
+      <div className="container-fluid">
+        <div className="container mx-auto taller-desc">
+          <div className="row">
+            <div className="col-4"> {/* Indicador de Disponible */}
+              <div className="row d-flex align-items-center justify-content-center">
+                <div className="col-2 w-auto p-0 pb-2 d-flex justify-content-center"><div className="dibujo-disponible"></div></div>
+                <div className="col-10 disponible-text">Disponible</div>
+              </div>
+            </div>
+            <div className="col-4"> {/* Indicador de Pronto Disponible */}
+              <div className="row d-flex align-items-center justify-content-center">
+                <div className="col-2 w-auto p-0 pb-2 d-flex justify-content-center"><div className="dibujo-pronto"></div></div>
+                <div className="col-10 disponible-text">Pronto Disponible</div>
+              </div>
+            </div>
+            <div className="col-4"> {/* Indicador de No Disponible */}
+              <div className="row d-flex align-items-center justify-content-center">
+                <div className="col-2 w-auto p-0 pb-2 d-flex justify-content-center"><div className="dibujo-nodisponible"></div></div>
+                <div className="col-10 disponible-text">No Disponible</div>
+              </div>
             </div>
           </div>
-          <div className="col-6 ps-0">
-            <img className="img-fluid taller-img" src={taller_ecologico} alt="taller ecologico"/>
-          </div>
         </div>
       </div>
 
-      <div className="container taller-container-mobile my-5">
-        <div className="row taller-row-mobile">
-          <div className="col-12 px-5">
-            <img className="img-fluid taller-img" src={taller_ecologico} alt="taller ecologico"/>
+      {/* Talleres Disponibles */}
+      <div className="container-fluid my-5">
+        <div className="container m-auto taller-container">
+          <div className="row taller-disponible-row mx-auto my-5 p-2">
+            <div className="col-10">
+              <div className="taller-disponible-title">
+                Esperando por Titulo de Taller
+              </div>
+            </div>
+            <div className="col-2">
+              <div className="taller-disponible-circle ms-auto"></div>
+            </div>
           </div>
-        </div>
-        <div className="row taller-row-mobile">
-          <div className="col-12 px-5">
-            <div className='taller-div h-100'>
-              <iframe style={{minHeight: '100%', width: '100%'}} src="https://docs.google.com/forms/d/e/1FAIpQLScd7-vm54f7iegNZU5jypWoQejxwE_09EQ48WtSeOHYL_hh-g/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+          <div className="row taller-disponible-row mx-auto my-5 p-2">
+            <div className="col-10">
+              <div className="taller-disponible-title">
+                Esperando por Titulo de Taller
+              </div>
+            </div>
+            <div className="col-2">
+              <div className="taller-disponible-circle ms-auto"></div>
+            </div>
+          </div>
+          <div className="row taller-disponible-row mx-auto my-5 p-2">
+            <div className="col-10">
+              <div className="taller-disponible-title">
+                Esperando por Titulo de Taller
+              </div>
+            </div>
+            <div className="col-2">
+              <div className="taller-disponible-circle ms-auto"></div>
             </div>
           </div>
         </div>

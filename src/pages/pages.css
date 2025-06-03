@@ -63,7 +63,7 @@
 
 .subtitle-font-kids {
   font-family: 'Butterfly Kids';
-  font-size: 10rem;
+  font-size: 8rem;
   text-align: center;
   color: white;
   text-shadow: 1px 0 10px black; 
@@ -72,9 +72,10 @@
 .taller-desc {
   border-radius: 25px;
   padding: min(2rem, 8%);
-  font-family: 'Butterfly Kids';
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
   text-align: justify;
-  color: black;
+  font-family: 'Amarante';
 }
 
 /* HomePage */
@@ -482,123 +483,74 @@
 .taller-container { 
   background-color: var(--bcolor-3);
   border-radius: 30px;
-}
-
-.taller-decoracion { 
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-.taller-div {
-  background: var(--bcolor-2);
-  min-height: 100%;
   width: 100%;
-  border-radius: 5% 0 0 5%;
+  height: auto;
+  padding: 30px;
 }
 
-.taller-img {
-  min-height: 100%;
-  width: 100%;
-  border-radius: 0 5% 5% 0;
+.dibujo-disponible,
+.dibujo-pronto,
+.dibujo-nodisponible,
+.taller-disponible-circle {
+  border-radius: 50%;
+  width: 30px !important;
+  height: 30px !important;
+}
+
+.dibujo-disponible {background-color: green;}
+.dibujo-pronto {background-color: yellow;}
+.dibujo-nodisponible {background-color: red;}
+.taller-disponible-circle {background-color: gray;}
+.disponible-text {
+  font-family: 'Amarante';
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.taller-disponible-row {
+  background-color: var(--bcolor-2);
+  border-radius: 10px;
+}
+
+.taller-disponible-title {
+  font-family: 'Amarante';
+  color: white;
+  font-size: 1.4rem;
 }
 
 @media (min-width: 1201px) {
   .subtitle-font-kids { font-size: 11rem; }
   .taller-caption { font-size: 4rem; }
-  .taller-desc { font-size: 2rem; }
-
-  #taller-decoracion-d { 
-    width: 30%;
-    right: -100px;
-    top: -100px;
-  }
-
-  #taller-decoracion-i {
-    width: 15%;
-    bottom: -90px;
-    left: -70px;
-  }
+  .taller-desc { font-size: 1.8rem; }
 }
 
 @media (max-width: 1200px) {
   .subtitle-font-kids { font-size: 9rem; }
   .taller-caption { font-size: 3rem; }
   .taller-desc { font-size: 1.8rem; }
-
-  #taller-decoracion-d { 
-    width: 30%;
-    right: -60px;
-    top: -80px;
-  }
-
-  #taller-decoracion-i {
-    width: 15%;
-    bottom: -90px;
-    left: -40px;
-  }
 }
 
 @media (max-width: 992px) {
   .subtitle-font-kids { font-size: 7rem; }
-  .taller-row-pc { height: 350px; }
   .taller-desc { font-size: 1.6rem; }
 
-  #taller-decoracion-d { 
-    width: 40%;
-    right: -100px;
-    top: -100px;
-  }
-
-  #taller-decoracion-i {
-    width: 15%;
-    bottom: -70px;
-    left: -40px;
-  }
+  .disponible-text { font-size: 1.2rem; }
+  .taller-disponible-title {font-size: 1rem;}
 }
 
 @media (max-width: 767px) {
   .subtitle-font-kids { font-size: 5rem; }
   .taller-caption { font-size: 2rem; }
   .taller-desc { font-size: 1.2rem; }
-  
-  .taller-row-pc {
-    height: 250px;
-  }
 
-  #taller-decoracion-d { 
-    width: 40%;
-    right: -80px;
-    top: -80px;
-  }
-
-  #taller-decoracion-i {
-    width: 20%;
-    bottom: -50px;
-    left: -50px;
-  }
-}
-
-@media (min-width: 577px) {
-  .taller-container-mobile { display: none; }
-  .taller-container-pc { display: block; }
+  .disponible-text { font-size: 1rem; }
+  .taller-disponible-title { font-size: 0.8rem; }
 }
 
 @media (max-width: 576px) {
-  .taller-container-pc { display: none; }
-  .taller-container-mobile { display: block; }
-  
   .subtitle-font-kids { font-size: 4rem; }
   .taller-caption { font-size: 1.6rem; }
   .taller-desc { font-size: 1rem; }
 
-  .taller-row-mobile {
-    height: 250px;
-  }
-
-  .taller-img { 
-    border-radius: 5px 5px 0 0; 
-    object-fit: cover;
-  }
-  .taller-div { border-radius: 0 0 5px 5px; }
+  .disponible-text { font-size: 0.6rem; }
 }
