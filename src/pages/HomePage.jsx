@@ -71,7 +71,7 @@ const HomePage = () => {
                 </div>
               </div>
               <div className="row d-flex flex-column historia-background">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora molestiae architecto quae, nihil eligendi sequi alias labore aut explicabo porro nemo natus ut, doloremque, consequuntur consectetur in assumenda sapiente id.
+                Nació en Punta de Piedras, Nueva Sparta. Por más de 50 años, se ha dedicado a la creación de títeres y marionetas. Eddy Salazar ha llevado su conocimiento a muchos niños, incursando como cuenta cuentos y artista plástico. Es valorado tanto a nivel local como estadal sobresaliendo por su iniciativa de promocionar la actividad cultural de la zona y extenderla a jovenes, adultos y niños con necesidades especiales.
               </div>
             </div>
             <div className="col-md-6">
@@ -84,7 +84,7 @@ const HomePage = () => {
                 </div>
               </div>
               <div className="row d-flex flex-column historia-background">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora molestiae architecto quae, nihil eligendi sequi alias labore aut explicabo porro nemo natus ut, doloremque, consequuntur consectetur in assumenda sapiente id.
+                Nace en Caracas. Con más de cuatro decadas de experiencia y múltiples facetas, son muchas las anécdotas que tiene para compartir Mario Pereira. Se inició en el mundo artístico en el año 1973 con el maestro Alfredo Almeida en un taller de teatro en el estado Aragua. Es compositor de música, escritor y actual coordinador del Ecomuseo de Títeres Marioeddy. 
               </div>
             </div>
           </div>
