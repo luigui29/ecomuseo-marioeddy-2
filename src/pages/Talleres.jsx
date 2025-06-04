@@ -83,6 +83,12 @@ const Talleres = () => {
         </div>
       </div>
 
+      {/* Formulario */}
+      <div className="container fluid my-5">
+        <div className="container d-flex justify-content-center">
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSczM6_UUbgBJSJHFNYXqsRtSUKyApXx-BDJfa-BIZvgJzYH_w/viewform?embedded=true" width="640" height="640" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+      </div>
       <Footer />
     </div>
   )
