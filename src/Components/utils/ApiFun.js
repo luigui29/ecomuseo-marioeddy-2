@@ -1,6 +1,6 @@
 // URL base para la API
-//const API_URL = "https://historias-api-crud-v2.vercel.app";
-const API_URL = "http://localhost:3000"
+const API_URL = 'https://historias-api-crud-v2.vercel.app'
+//const API_URL = "http://localhost:3000"
 // Funciones de API que extraen el array de datos de la respuesta
 export const getAutores = async () => {
   try {
