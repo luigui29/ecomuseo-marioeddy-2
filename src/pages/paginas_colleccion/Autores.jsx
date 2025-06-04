@@ -1,5 +1,5 @@
 import React from 'react'
-import { getAutores , getObras } from '../../Components/utils/ApiFun.js'
+import { getAutores } from '../../Components/utils/ApiFun.js'
 import { useEffect, useState } from 'react'
 import styles from './Autores.module.css'
 import decoracion from '../../assets/anillo_dorado_1.png'
