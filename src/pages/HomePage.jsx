@@ -13,6 +13,9 @@ import titere_1 from '../assets/titeres-1.png'
 import titere_2 from '../assets/titeres-2.png'
 import eddy_foto from '../assets/eddy-salazar-foto-1.jpg'
 import mario_foto from '../assets/mario-pereira-foto-1.jpg'
+import redtetilogo from '../assets/redteti.jpg'
+import bolivarlogo from '../assets/bolivar.jpg'
+import amorlogo from '../assets/fundacionamor.jpg'
 
 const HomePage = () => {
   return (
@@ -45,7 +48,12 @@ const HomePage = () => {
             <div className="row nuestro-museo-desc caption-font position-relative">
               Nace el 21 de Marzo de 2024 (Día Mundial del Títere), su nombre es una fusión en homenaje a dos legendarios del teatro del guiñol. Su fundador y director es el licenciado y titiritero Mario R. Pereira, quien es creador también del teatro de titeres especie (1987) y del festival escolar de títeres alegría (1985). Actualmente contamos con el apoyo de la Secretaria Cultural de la Gobernación del Estado Bolívar, con la asignación a tiempo completo de dos activadoras culturales, y que son a la vez guías recreadoras para atender con eficacia y eficiencia al público asistente.
             </div>
-            <div className="row">
+            <div className="row my-3">
+              <div className="col-4 d-flex justify-content-center"><img src={redtetilogo} className='img-fluid fundaciones-logo'/></div>
+              <div className="col-4 d-flex justify-content-center"><img src={bolivarlogo} className='img-fluid fundaciones-logo'/></div>
+              <div className="col-4 d-flex justify-content-center"><img src={amorlogo} className='img-fluid fundaciones-logo'/></div>
+            </div>
+            <div className="row my-3">
               <div className="col-6 d-flex flex-column">
                 <div className='subtitle-font' style={{margin: '0 auto'}}> Visión </div>
                 <div className='misvis-desc'> Ser un referente cultural en la promocion del arte de los titeres, conectando tradicion e innovacion para inspirar a diferentes generaciones. </div>

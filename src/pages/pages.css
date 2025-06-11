@@ -97,6 +97,12 @@
   font-size: 2rem;
   z-index: 99;
 }
+
+.fundaciones-logo {
+  width: calc(100vw/6);
+  height: auto;
+}
+
 .misvis-desc {
   font-family: 'Amarante';
   background-color: var(--gcolor-5);
@@ -355,7 +361,7 @@
 
 .collection-title { 
   line-height: 1;
-  font-size: 16vw;
+  font-size: 14vw;
   text-shadow: 1px 0 5px var(--gcolor-5);
 }
 
